@@ -1,15 +1,19 @@
 import React from "react";
 import { RightGroup, TopbarContainer } from "../styles/Topbar";
 import { SearchIcon } from "./Icons/SearchIcon";
-import { ThemeToggler } from "./ThemeToggler";
+import { Logo } from "./Logo";
 
 export const Topbar = () => {
     return (
         <TopbarContainer>
-            <h1>GIF Picker</h1>
+            <Logo size="2rem" />
             <RightGroup>
-                {/* <SearchIcon color="#222" size="19" /> */}
-                <ThemeToggler />
+                <a className="nav-link" href="#about">
+                    About
+                </a>
+                <a className="nav-link search" href="#top">
+                    <SearchIcon color="textColor" size="0.8" />
+                </a>
             </RightGroup>
         </TopbarContainer>
     );

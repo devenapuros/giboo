@@ -1,10 +1,12 @@
 import React from "react";
 import { Header } from "../components/Header";
+import { MainTops } from "../components/TopList";
 
 export const MainPage = () => {
     return (
-        <div>
+        <React.Fragment>
             <Header />
-        </div>
+            <MainTops />
+        </React.Fragment>
     );
 };

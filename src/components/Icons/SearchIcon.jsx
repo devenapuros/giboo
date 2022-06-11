@@ -4,17 +4,12 @@ export const SearchIcon = ({ color, size }) => {
     return (
         <SvgIcon
             xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            width={size || "24"}
-            height={size || "24"}
+            width="24"
+            height="24"
             color={color}
+            size={size}
         >
-            <g data-name="Layer 2">
-                <g data-name="search">
-                    <rect width="24" height="24" opacity="0" />
-                    <path d="M20.71 19.29l-3.4-3.39A7.92 7.92 0 0 0 19 11a8 8 0 1 0-8 8 7.92 7.92 0 0 0 4.9-1.69l3.39 3.4a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 11a6 6 0 1 1 6 6 6 6 0 0 1-6-6z" />
-                </g>
-            </g>
+            <path d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path>
         </SvgIcon>
     );
 };

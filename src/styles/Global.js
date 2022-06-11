@@ -12,6 +12,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        background-color: #fafbfc !important; //TODO: Color del theme aqui
+        background-color: ${({ theme }) => theme.backgroundColor} !important;
+        transition: all 300ms ease;
     }
 `;

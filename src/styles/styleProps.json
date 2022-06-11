@@ -1,0 +1,11 @@
+{
+    "dark": {
+        "backgroundColor": "#000",
+        "textColor": "#eeeeee",
+        "blueColor": "#00a6fb",
+        "yellowColor": "#ffbd00",
+        "grayColor": "#666666",
+        "blackColor": "#252525",
+        "whiteColor": "#fefefe"
+    }
+}
