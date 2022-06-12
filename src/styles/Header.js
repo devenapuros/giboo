@@ -6,8 +6,8 @@ export const HeaderContainer = styled.header`
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    height: 60vh;
-    background: url("/public/ibm.gif");
+    height: 75vh;
+    background: url("/public/computer-retro.gif");
     background-position: 50% 50%;
     background-size: cover;
     color: ${({ theme }) => theme.whiteColor};
@@ -20,11 +20,12 @@ export const SearchSection = styled.div`
     flex-direction: column;
     text-align: center;
     gap: 1.5rem;
-    width: 90vw;
+    width: 88vw;
     .slogan {
         width: 90%;
-        line-height: 1.25rem;
-        font-weight: bold;
-        text-shadow: black 0px 0px 10px;
+        line-height: 35px;
+        font-size: 1.6rem;
+        font-weight: 550;
+        text-shadow: #000000 0px 0px 10px;
     }
 `;

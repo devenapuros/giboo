@@ -1,19 +1,18 @@
 import React from "react";
 import { HeaderContainer, SearchSection } from "../styles/Header";
-import { Logo } from "./Logo";
 import { SearchForm } from "./SearchForm";
-import { SearchInput } from "./SearchInput";
 import { Topbar } from "./Topbar";
 
 export const Header = () => {
     return (
         <HeaderContainer>
             <Topbar />
-            <Logo size="6rem" />
+            {/* <Logo size="6rem" /> */}
             <SearchSection>
-                <p className="slogan">
-                    Hundreds and hundreds of gifs ready to cheer up your life.
-                </p>
+                <h1 className="slogan">
+                    From cats to memes. Hundreds and hundreds of funny gifs
+                    waiting to be discovered.
+                </h1>
                 <SearchForm />
             </SearchSection>
         </HeaderContainer>

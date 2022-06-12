@@ -13,44 +13,24 @@ const shadowEffect = keyframes`
 export const InputContainer = styled.div`
     display: flex;
     align-items: center;
-    background-color: white;
-    padding: 0 0.4rem;
+    background-color: ${({ theme }) => theme.whiteColor};
+    border: 1px solid ${({ theme }) => theme.whiteColor};
+    padding: 0 0.6rem;
     gap: 0.5rem;
     width: 100% !important;
     border-radius: 6px;
-    transition: filter 300ms ease;
-    z-index: 3;
+    transition: all 300ms ease;
+    z-index: 1;
 
     &:focus-within {
-        animation: ${shadowEffect} 7s alternate infinite;
+        border: 1px solid ${({ theme }) => theme.grayColor};
     }
 `;
 
 export const Input = styled.input`
     width: 100%;
-    padding: 0.7rem;
+    padding: 0.8rem 0;
     border: 0;
     outline: none;
     color: ${({ theme }) => theme.blackColor};
-`;
-
-export const InputButton = styled.button`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 0;
-    outline: none;
-    height: 24px;
-    width: 24px;
-    background-color: transparent;
-    svg {
-        transition: all 300ms ease;
-        fill: ${({ theme }) => theme.grayColor};
-    }
-    &:hover {
-        cursor: pointer;
-        svg {
-            fill: ${({ theme }) => theme.blackColor};
-        }
-    }
 `;

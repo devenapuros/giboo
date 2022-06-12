@@ -1,6 +1,7 @@
 import React from "react";
-import { Input, InputButton, InputContainer } from "../styles/SearchInput";
+import { Input, InputContainer } from "../styles/SearchInput";
 import { SearchIcon } from "./Icons/SearchIcon";
+import { TransparentButton } from "./TransparentButton";
 
 export const SearchInput = ({ name, placeholder, handleChange }) => {
     return (
@@ -11,9 +12,7 @@ export const SearchInput = ({ name, placeholder, handleChange }) => {
                 placeholder={placeholder}
                 onChange={handleChange}
             />
-            <InputButton>
-                <SearchIcon size="0.85" />
-            </InputButton>
+            <TransparentButton icon={<SearchIcon size="0.85" />} />
         </InputContainer>
     );
 };

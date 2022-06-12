@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const TopbarContainer = styled.nav`
     position: fixed;
@@ -7,10 +7,17 @@ export const TopbarContainer = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 0.8rem;
+    padding: 0.6rem 1.5rem;
+    z-index: 2;
+    transition: all 300ms ease;
+    .nav-link.search {
+        display: none;
+        opacity: 0;
+        align-items: center;
+    }
 
     .Logo {
-        opacity: 0;
+        opacity: 1;
     }
 
     .nav-link {
@@ -20,11 +27,16 @@ export const TopbarContainer = styled.nav`
         text-decoration: none;
     }
 
-    .nav-link.search {
-        display: none;
-        opacity: 0;
-        align-items: center;
-    }
+    ${({ header, theme }) =>
+        header &&
+        css`
+            background-color: ${theme.blackColor};
+            box-shadow: black 0px 10px 10px -10px;
+            .nav-link.search {
+                display: flex;
+                opacity: 1;
+            }
+        `};
 `;
 
 export const RightGroup = styled.div`
