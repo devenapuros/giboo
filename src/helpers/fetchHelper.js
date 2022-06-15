@@ -1,5 +1,4 @@
-import { fetchErrors } from "../constants/errors/errorCodes";
-
+/* eslint-disable indent */
 export const customFetch = (endpoint, options = {}) => {
     const defaultHeader = {
         accept: "application/json",
@@ -17,20 +16,19 @@ export const customFetch = (endpoint, options = {}) => {
     options.body = options.body ? JSON.stringify(options.body) : false;
     if (!options.body) delete options.body;
 
-    setTimeout(() => controller.abort(), 5000);
+    setTimeout(() => controller.abort(), 15000);
 
     return fetch(endpoint, options)
         .then((res) =>
-            res.ok ? res.json() : Promise.reject(fetchErrors.FETCH_REJECTED)
+            res.ok
+                ? res.json()
+                : Promise.reject({
+                      err: true,
+                      status: res.status || "00",
+                      statusText: res.statusText || "Fetch rejected",
+                  })
         )
-        .catch((err) => {
-            //!console.log(err);
-            if (err.status && err.statusText) {
-                throw err;
-            } else {
-                throw fetchErrors.SERVER_UNAVAILABLE;
-            }
-        });
+        .catch((err) => err);
 };
 
 export const get = (url, options = {}) => customFetch(url, options);

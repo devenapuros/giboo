@@ -2,11 +2,11 @@ import styled, { keyframes } from "styled-components";
 
 const shadowEffect = keyframes`
     0% {
-        filter: drop-shadow(3px 3px 10px #00a6fba0);
+        filter: drop-shadow(3px 3px 5px #00a6fb60);
     }
 
     100% {
-        filter: drop-shadow(3px 3px 10px #f72585a0);
+        filter: drop-shadow(3px 3px 5px #f7258560);
     }
 `;
 

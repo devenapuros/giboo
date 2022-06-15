@@ -13,24 +13,32 @@ const shadowEffect = keyframes`
 export const InputContainer = styled.div`
     display: flex;
     align-items: center;
-    background-color: ${({ theme }) => theme.whiteColor};
-    border: 1px solid ${({ theme }) => theme.whiteColor};
-    padding: 0 0.6rem;
+    background-color: ${({ theme }) => theme.backgroundColorAlt};
+    border: 1px solid ${({theme}) => theme.hoverColor};
+    padding: 0 0.6rem 0 0.8rem;
     gap: 0.5rem;
     width: 100% !important;
     border-radius: 6px;
     transition: all 300ms ease;
-    z-index: 1;
 
     &:focus-within {
-        border: 1px solid ${({ theme }) => theme.grayColor};
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .search-btn svg {
+        fill: ${({ theme }) => theme.grayColor};
+    }
+
+    .search-btn:hover svg {
+        fill: ${({ theme }) => theme.textColor};
     }
 `;
 
 export const Input = styled.input`
     width: 100%;
-    padding: 0.8rem 0;
+    padding: 0.9rem 0;
     border: 0;
     outline: none;
-    color: ${({ theme }) => theme.blackColor};
+    background-color: transparent;
+    color: ${({ theme }) => theme.textColorAlt};
 `;

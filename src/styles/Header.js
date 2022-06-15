@@ -7,7 +7,7 @@ export const HeaderContainer = styled.header`
     align-items: center;
     gap: 1rem;
     height: 75vh;
-    background: url("/public/computer-retro.gif");
+    background: url("/public/pc.gif");
     background-position: 50% 50%;
     background-size: cover;
     color: ${({ theme }) => theme.whiteColor};

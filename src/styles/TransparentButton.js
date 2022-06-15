@@ -9,14 +9,7 @@ export const TransparentBtn = styled.button`
     outline: none;
     background-color: transparent;
     transition: all 300ms ease;
-    svg {
-        transition: all 300ms ease;
-        fill: ${({ theme }) => theme.grayColor};
-    }
     &:hover {
         cursor: pointer;
-        svg {
-            fill: ${({ theme }) => theme.blackColor};
-        }
     }
 `;

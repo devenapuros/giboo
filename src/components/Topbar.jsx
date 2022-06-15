@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { RightGroup, TopbarContainer } from "../styles/Topbar";
-import { SearchIcon } from "./Icons/SearchIcon";
 import { Logo } from "./Logo";
+import { PrimaryButton } from "./PrimaryButton";
+import { TransparentButton } from "./TransparentButton";
+import { MenuIcon } from "./Icons/MenuIcon";
 
 export const Topbar = () => {
     const [header, setHeader] = useState(false);
@@ -18,11 +20,13 @@ export const Topbar = () => {
 
     return (
         <TopbarContainer header={header}>
-            <Logo size="3rem" />
+            <Logo size="2.35rem" />
             <RightGroup>
-                <a className="nav-link search" href="#top">
-                    <SearchIcon color="textColor" size="0.8" />
-                </a>
+                <PrimaryButton label="Ingresar" />
+                <TransparentButton
+                    name="menu-btn"
+                    icon={<MenuIcon color="textColor" />}
+                />
             </RightGroup>
         </TopbarContainer>
     );

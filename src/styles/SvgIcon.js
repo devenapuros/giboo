@@ -4,4 +4,5 @@ export const SvgIcon = styled.svg`
     transform: scale(${({ size }) => size || "1"});
     min-width: 24px;
     min-height: 24px;
+    transition: all 300ms ease;
 `;

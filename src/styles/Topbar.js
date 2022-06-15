@@ -7,34 +7,21 @@ export const TopbarContainer = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.6rem 1.5rem;
+    padding: 0.6rem 1rem;
     z-index: 2;
     transition: all 300ms ease;
-    .nav-link.search {
-        display: none;
-        opacity: 0;
-        align-items: center;
-    }
 
-    .Logo {
-        opacity: 1;
-    }
-
-    .nav-link {
-        color: ${({ theme }) => theme.whiteColor};
-        font-weight: 600;
-        font-size: 0.9rem;
-        text-decoration: none;
+    .menu-btn svg {
+        fill: ${({ theme }) => theme.whiteColor};
     }
 
     ${({ header, theme }) =>
         header &&
         css`
-            background-color: ${theme.blackColor};
-            box-shadow: black 0px 10px 10px -10px;
-            .nav-link.search {
-                display: flex;
-                opacity: 1;
+            background-color: ${theme.backgroundColorAlt};
+            box-shadow: ${theme.shadow};
+            .menu-btn svg {
+                fill: ${({ theme }) => theme.textColor};
             }
         `};
 `;

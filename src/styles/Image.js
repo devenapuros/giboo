@@ -5,12 +5,20 @@ export const ImageContainer = styled.div`
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    border-radius: 5px;
-    width: ${({ size }) => size || "3rem"};
-    height: ${({ size }) => size || "3rem"};
+    border-radius: 3px;
+    width: ${({ width }) => width || "3rem"};
+    height: ${({ height }) => height || "3rem"};
+    min-width: ${({ width }) => width || "3rem"};
+    min-height: ${({ height }) => height || "3rem"};
+    background-color: ${({ theme }) => theme.backgroundColorAlt};
+    &:hover {
+        cursor: pointer;
+    }
 `;
 
 export const Img = styled.img`
-    width: ${({ size }) => size || "3rem"};
-    height: ${({ size }) => size || "3rem"};
+    width: ${({ width }) => width || "3rem"};
+    height: ${({ height }) => height || "3rem"};
+    min-width: ${({ width }) => width || "3rem"};
+    min-height: ${({ height }) => height || "3rem"};
 `;

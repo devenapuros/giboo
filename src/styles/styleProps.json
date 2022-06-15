@@ -1,12 +1,32 @@
 {
-    "dark": {
-        "backgroundColor": "#0a0a0a",
-        "backgroundColorAlt": "#222",
-        "textColor": "#eeeeee",
+    "light": {
+        "backgroundColor": "#f3f4f6",
+        "backgroundColorAlt": "#fff",
+        "textColor": "#131313",
+        "textColorAlt": "#333",
         "blueColor": "#00a6fb",
+        "pinkColor": "#f72585",
+        "purpleColor": "#5e60ce",
         "yellowColor": "#ffbd00",
         "grayColor": "#666666",
         "blackColor": "#151515",
-        "whiteColor": "#fefefe"
+        "whiteColor": "#fefefe",
+        "hoverColor": "#00000030",
+        "shadow": "rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;"
+    },
+    "dark": {
+        "backgroundColor": "#131415",
+        "backgroundColorAlt": "#202122",
+        "textColor": "#fdfdff",
+        "textColorAlt": "#eee",
+        "blueColor": "#00a6fb",
+        "pinkColor": "#f72585",
+        "purpleColor": "#5e60ce",
+        "yellowColor": "#ffbd00",
+        "grayColor": "#666666",
+        "blackColor": "#151515",
+        "whiteColor": "#fefefe",
+        "hoverColor": "#ffffff15",
+        "shadow": " rgba(0, 0, 0, 1) 0px 10px 10px -10px;"
     }
 }

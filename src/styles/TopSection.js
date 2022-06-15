@@ -16,11 +16,17 @@ export const TitleSection = styled.div`
     align-items: center;
     width: 100%;
     h2 {
-        color: ${({ theme }) => theme.textColor};
+        color: ${({ theme }) => theme.textColorAlt};
         font-weight: 600;
         text-transform: capitalize;
     }
-    button:hover {
+    button.transparent-btn {
+        color: ${({ theme }) => theme.grayColor};
+        svg {
+            fill: ${({ theme }) => theme.grayColor};
+        }
+    }
+    button.transparent-btn:hover {
         cursor: pointer;
         color: ${({ theme }) => theme.whiteColor};
         svg {

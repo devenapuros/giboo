@@ -1,10 +1,11 @@
 import React from "react";
 import { TransparentBtn } from "../styles/TransparentButton";
 
-export const TransparentButton = ({ label, icon }) => {
+export const TransparentButton = ({ label, icon, name }) => {
     return (
-        <TransparentBtn>
-            {label}{icon}
+        <TransparentBtn className={name || "transparent-btn"}>
+            {label}
+            {icon}
         </TransparentBtn>
     );
 };
