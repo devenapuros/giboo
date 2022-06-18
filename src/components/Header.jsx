@@ -6,7 +6,7 @@ import { Topbar } from "./Topbar";
 export const Header = () => {
     return (
         <HeaderContainer>
-            <Topbar />
+            <Topbar allowHeader={true}/>
             {/* <Logo size="6rem" /> */}
             <SearchSection>
                 <h1 className="slogan">

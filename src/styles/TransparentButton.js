@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const TransparentBtn = styled.button`
     display: flex;
@@ -12,4 +12,12 @@ export const TransparentBtn = styled.button`
     &:hover {
         cursor: pointer;
     }
+    ${({ disabled }) =>
+        disabled &&
+        css`
+            cursor: not-allowed !important;
+            svg {
+                fill: ${({ theme }) => theme.grayColor} !important;
+            }
+        `}
 `;

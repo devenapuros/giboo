@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const RectSkeleton = styled.div`
-    height: ${({ size }) => size || "3rem"};
-    width: ${({ size }) => size || "3rem"};
-    min-height: ${({ size }) => size || "3rem"};
-    min-width: ${({ size }) => size || "3rem"};
-    background-color: ${({ theme }) => theme.backgroundColorAlt};
+    height: ${({ height }) => height || "3rem"};
+    width: ${({ width }) => width || "3rem"};
+    min-height: ${({ height }) => height || "3rem"};
+    min-width: ${({ width }) => width || "3rem"};
+    background-color: ${({ theme }) => theme.hoverColor};
     border-radius: 4px;
 `;

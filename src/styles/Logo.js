@@ -16,10 +16,12 @@ export const LogoContainer = styled.div`
     align-items: center;
     height: ${({ size }) => size || "500px"};
     width: fit-content;
-
     img {
         width: auto;
         height: 100%;
         animation: ${shadowEffect} 3s alternate infinite;
+    }
+    &:hover {
+        cursor: pointer;
     }
 `;

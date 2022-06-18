@@ -4,8 +4,9 @@ import { Logo } from "./Logo";
 import { PrimaryButton } from "./PrimaryButton";
 import { TransparentButton } from "./TransparentButton";
 import { MenuIcon } from "./Icons/MenuIcon";
+import { SearchForm } from "./SearchForm";
 
-export const Topbar = () => {
+export const Topbar = ({ allowHeader }) => {
     const [header, setHeader] = useState(false);
     useEffect(() => {
         document.addEventListener("scroll", () => {
@@ -19,10 +20,11 @@ export const Topbar = () => {
     }, []);
 
     return (
-        <TopbarContainer header={header}>
-            <Logo size="2.35rem" />
+        <TopbarContainer header={allowHeader ? header : true}>
+            <Logo size="2rem" />
+            <SearchForm name="search-form" padding="0.65rem 0" />
             <RightGroup>
-                <PrimaryButton label="Ingresar" />
+                <PrimaryButton name="join-btn" label="Join" />
                 <TransparentButton
                     name="menu-btn"
                     icon={<MenuIcon color="textColor" />}

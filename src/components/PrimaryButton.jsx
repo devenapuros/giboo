@@ -1,9 +1,9 @@
 import React from "react";
 import { PrimaryBtn } from "../styles/PrimaryButton";
 
-export const PrimaryButton = ({ label, icon }) => {
+export const PrimaryButton = ({ label, icon, name }) => {
     return (
-        <PrimaryBtn>
+        <PrimaryBtn className={name || "primary-btn"}>
             {label}
             {icon}
         </PrimaryBtn>

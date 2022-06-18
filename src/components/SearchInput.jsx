@@ -1,18 +1,22 @@
 import React from "react";
-import { Input, InputContainer } from "../styles/SearchInput";
+import { ErrorContainer, Input, InputContainer } from "../styles/SearchInput";
 import { SearchIcon } from "./Icons/SearchIcon";
 import { TransparentButton } from "./TransparentButton";
+import { ErrorIcon } from "./Icons/ErrorIcon";
 
 export const SearchInput = ({
     name,
     value,
+    error,
+    isFocus,
     placeholder,
     handleChange,
     handleFocus,
     handleBlur,
+    padding,
 }) => {
     return (
-        <InputContainer>
+        <InputContainer focus={isFocus}>
             <Input
                 type="text"
                 name={name}
@@ -21,10 +25,12 @@ export const SearchInput = ({
                 onChange={handleChange}
                 onFocus={handleFocus}
                 onBlur={handleBlur}
+                padding={padding}
             />
             <TransparentButton
                 name="search-btn"
                 icon={<SearchIcon size="0.85" />}
+                disabled={value ? false : true}
             />
         </InputContainer>
     );

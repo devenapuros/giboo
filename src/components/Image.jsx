@@ -1,9 +1,24 @@
+import { Link } from "wouter";
 import { ImageContainer, Img } from "../styles/Image";
 
-export const Image = ({ src, contWidth, contHeight, imgWidth, imgHeight }) => {
+export const Image = ({
+    id,
+    src,
+    contWidth,
+    contHeight,
+    imgWidth,
+    imgHeight,
+    hoverable,
+}) => {
     return (
-        <ImageContainer href="/" width={contWidth} height={contHeight}>
-            <Img src={src} alt="" width={imgWidth} height={imgHeight} />
-        </ImageContainer>
+        <Link href={`/gif/${id}`}>
+            <ImageContainer
+                width={contWidth}
+                height={contHeight}
+                hoverable={hoverable}
+            >
+                <Img src={src} alt="" width={imgWidth} height={imgHeight} />
+            </ImageContainer>
+        </Link>
     );
 };

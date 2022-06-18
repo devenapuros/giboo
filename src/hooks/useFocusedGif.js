@@ -2,26 +2,24 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { get } from "../helpers/fetchHelper";
 
-export const useGifGetter = (keyword, limit = 10, offset = 0) => {
+export const useFocusedGif = (id) => {
     const [data, setData] = useState(null);
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(true);
-    const [pagination, setPagination] = useState(null);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
                 setLoading(true);
-                let URL = `https://api.giphy.com/v1/gifs/search?api_key=fiog0go38CpXMAgAlcG3BXMPNltyfBPv&q=${keyword}&limit=${limit}&offset=${offset}&rating=g&lang=en`;
+                let URL = `https://api.giphy.com/v1/gifs/${id}?api_key=fiog0go38CpXMAgAlcG3BXMPNltyfBPv`;
                 let response = await get(URL);
                 if (
                     response.meta &&
                     response.meta.status &&
                     response.meta.status === 200
                 ) {
-                    //! console.log(response.data);
+                    //console.log(response.data);
                     setData(response.data);
-                    setPagination(response.pagination);
                     setError(false);
                 } else {
                     //! console.log("error:", response);
@@ -33,8 +31,9 @@ export const useGifGetter = (keyword, limit = 10, offset = 0) => {
                 setError(err);
             }
         };
-        fetchData();
-    }, [keyword]);
+        if (id) fetchData();
+        else setError("Missing id");
+    }, [id]);
 
-    return [data, error, loading, pagination];
+    return [data, error, loading];
 };

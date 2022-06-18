@@ -7,12 +7,16 @@ export const TopbarContainer = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.6rem 1rem;
+    gap: 1rem;
+    padding: 0.6rem 0.8rem;
     z-index: 2;
     transition: all 300ms ease;
 
     .menu-btn svg {
         fill: ${({ theme }) => theme.whiteColor};
+    }
+    .search-form {
+        display: none;
     }
 
     ${({ header, theme }) =>
@@ -22,6 +26,12 @@ export const TopbarContainer = styled.nav`
             box-shadow: ${theme.shadow};
             .menu-btn svg {
                 fill: ${({ theme }) => theme.textColor};
+            }
+            .join-btn {
+                display: none;
+            }
+            .search-form {
+                display: flex;
             }
         `};
 `;

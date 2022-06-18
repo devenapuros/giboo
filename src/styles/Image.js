@@ -5,14 +5,14 @@ export const ImageContainer = styled.div`
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    border-radius: 3px;
+    border-radius: 5px;
     width: ${({ width }) => width || "3rem"};
     height: ${({ height }) => height || "3rem"};
     min-width: ${({ width }) => width || "3rem"};
-    min-height: ${({ height }) => height || "3rem"};
-    background-color: ${({ theme }) => theme.backgroundColorAlt};
+    min-height: 5rem;
+    background-color: ${({ theme }) => theme.hoverColor};
     &:hover {
-        cursor: pointer;
+        cursor: ${({ hoverable }) => (hoverable ? "pointer" : "default")};
     }
 `;
 
