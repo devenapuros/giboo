@@ -7,7 +7,7 @@ export const HeaderContainer = styled.header`
     align-items: center;
     gap: 1rem;
     height: 75vh;
-    background: url("/public/pc.gif");
+    background: url("/public/child.gif");
     background-position: 50% 50%;
     background-size: cover;
     color: ${({ theme }) => theme.whiteColor};
@@ -20,12 +20,42 @@ export const SearchSection = styled.div`
     flex-direction: column;
     text-align: center;
     gap: 1.5rem;
-    width: 88vw;
+
     .slogan {
-        width: 90%;
-        line-height: 35px;
+        width: 100%;
+        line-height: 38px;
         font-size: 1.6rem;
         font-weight: 550;
         text-shadow: #000000 0px 0px 10px;
+    }
+
+    @media screen and (max-width: 600px) {
+        width: 88vw;
+    }
+
+    @media screen and (min-width: 600px) {
+        width: 78vw;
+    }
+
+    @media screen and (min-width: 768px) {
+        width: 68vw;
+    }
+
+    @media screen and (min-width: 992px) {
+        width: 54vw;
+        .slogan {
+            width: 100%;
+            font-size: 2rem;
+            font-weight: 550;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 48vw;
+        .slogan {
+            width: 100%;
+            font-size: 2rem;
+            font-weight: 550;
+        }
     }
 `;

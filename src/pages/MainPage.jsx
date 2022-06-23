@@ -8,6 +8,7 @@ export const MainPage = () => {
         <React.Fragment>
             <Header />
             <MainTops />
+            <Footer />
         </React.Fragment>
     );
 };

@@ -37,6 +37,8 @@ export const Input = styled.input`
     outline: none;
     background-color: transparent;
     color: ${({ theme }) => theme.textColorAlt};
+    font-size: 1rem;
+    font-weight: 500;
 `;
 
 export const ErrorContainer = styled.div`

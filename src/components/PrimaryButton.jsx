@@ -1,9 +1,9 @@
 import React from "react";
-import { PrimaryBtn } from "../styles/PrimaryButton";
+import { PrimaryBtn } from "../styles/Button";
 
-export const PrimaryButton = ({ label, icon, name }) => {
+export const PrimaryButton = ({ label, icon, name, handleClick }) => {
     return (
-        <PrimaryBtn className={name || "primary-btn"}>
+        <PrimaryBtn className={name || "primary-btn"} onClick={handleClick}>
             {label}
             {icon}
         </PrimaryBtn>

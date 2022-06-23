@@ -8,7 +8,7 @@ export const GlobalStyle = createGlobalStyle`
         list-style: none;
         text-decoration: none;
         appearance: none;
-        font-family: "Poppins", sans-serif;
+        font-family: 'Poppins', sans-serif;
     }
 
     body {

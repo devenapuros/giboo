@@ -6,17 +6,9 @@ export const GifGrid = ({ data, loading, error }) => {
     if (loading)
         return (
             <GifContainer>
-                <RectangleSkeleton height="5rem" width="100%" />
-                <RectangleSkeleton height="5rem" width="100%" />
-                <RectangleSkeleton height="5rem" width="100%" />
-                <RectangleSkeleton height="5rem" width="100%" />
-                <RectangleSkeleton height="5rem" width="100%" />
-                <RectangleSkeleton height="5rem" width="100%" />
-                <RectangleSkeleton height="5rem" width="100%" />
-                <RectangleSkeleton height="5rem" width="100%" />
-                <RectangleSkeleton height="5rem" width="100%" />
-                <RectangleSkeleton height="5rem" width="100%" />
-                <RectangleSkeleton height="5rem" width="100%" />
+                {Array.from({ length: 30 }).map((item, index) => (
+                    <RectangleSkeleton key={index} name="gif-skeleton" height="10rem" width="100%" />
+                ))}
             </GifContainer>
         );
     if (error) return <GifContainer>{error}</GifContainer>;
@@ -33,7 +25,7 @@ export const GifGrid = ({ data, loading, error }) => {
                             contWidth="100%"
                             contHeight="fit-content"
                             imgWidth="100%"
-                            imgHeight="auto"
+                            imgHeight="100%"
                         />
                     ))}
             </GifContainer>

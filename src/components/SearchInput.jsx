@@ -31,6 +31,7 @@ export const SearchInput = ({
                 name="search-btn"
                 icon={<SearchIcon size="0.85" />}
                 disabled={value ? false : true}
+                width="28px"
             />
         </InputContainer>
     );

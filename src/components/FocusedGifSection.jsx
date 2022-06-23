@@ -1,9 +1,9 @@
 import React from "react";
 import {
-    ActionBtn,
+    BackLink,
     BtnGroup,
-    DownloadBtn,
     FocusedGifContainer,
+    GifDataSection,
     GifTitle,
 } from "../styles/FocusedGifSection";
 import { FocusedImage } from "./FocusedImage";
@@ -12,6 +12,9 @@ import { RectangleSkeleton } from "./RectangleSkeleton";
 import { HeartOutlineIcon } from "./Icons/HeartOutlineIcon";
 import { DownloadIcon } from "./Icons/DownloadIcon";
 import { QueueIcon } from "./Icons/QueueIcon";
+import { LeftArrowIcon } from "./Icons/LeftArrowIcon";
+import { PrimaryButton } from "./PrimaryButton";
+import { OutlineButton } from "./OutlineButton";
 
 export const FocusedGifSection = ({ id }) => {
     const [data, error, loading] = useFocusedGif(id);
@@ -32,8 +35,11 @@ export const FocusedGifSection = ({ id }) => {
     if (error) return <FocusedGifContainer>{error}</FocusedGifContainer>;
     else
         return (
-            <FocusedGifContainer>
-                <GifTitle>{data?.title}</GifTitle>
+            <FocusedGifContainer className="hola">
+                <BackLink onClick={() => window.history.back()}>
+                    <LeftArrowIcon />
+                    Go back
+                </BackLink>
                 <FocusedImage
                     id={data?.id}
                     src={data?.images?.original?.url}
@@ -42,17 +48,20 @@ export const FocusedGifSection = ({ id }) => {
                     imgWidth="100%"
                     imgHeight="auto"
                 />
-                <BtnGroup>
-                    <ActionBtn>
-                        <HeartOutlineIcon /> Add to favofites
-                    </ActionBtn>
-                    <ActionBtn>
-                        <QueueIcon /> Collect
-                    </ActionBtn>
-                </BtnGroup>
-                <DownloadBtn>
-                    <DownloadIcon /> Download gif
-                </DownloadBtn>
+                <GifDataSection>
+                    <GifTitle>{data?.title}</GifTitle>
+                    <BtnGroup>
+                        <OutlineButton
+                            label="Add to favorites"
+                            rightIcon={<HeartOutlineIcon />}
+                        />
+                        <OutlineButton
+                            label="Collect"
+                            rightIcon={<QueueIcon />}
+                        />
+                    </BtnGroup>
+                    <PrimaryButton label="Download" icon={<DownloadIcon />} />
+                </GifDataSection>
             </FocusedGifContainer>
         );
 };

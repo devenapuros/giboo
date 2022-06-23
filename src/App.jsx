@@ -8,7 +8,7 @@ import { GifPage } from "./pages/GifPage";
 
 function App() {
     return (
-        <ThemeProvider theme={styleProps["light"]}>
+        <ThemeProvider theme={styleProps["dark"]}>
             <GlobalStyle />
             <Route path="/" component={MainPage} />
             <Route path="/search" component={SearchPage} />

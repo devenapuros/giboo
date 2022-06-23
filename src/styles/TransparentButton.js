@@ -7,6 +7,7 @@ export const TransparentBtn = styled.button`
     gap: 0.3rem;
     border: 0;
     outline: none;
+    width: ${({ width }) => width || "100%"};
     background-color: transparent;
     transition: all 300ms ease;
     &:hover {

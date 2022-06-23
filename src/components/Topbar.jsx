@@ -5,9 +5,14 @@ import { PrimaryButton } from "./PrimaryButton";
 import { TransparentButton } from "./TransparentButton";
 import { MenuIcon } from "./Icons/MenuIcon";
 import { SearchForm } from "./SearchForm";
+import { LoginModal } from "./LoginModal";
+import { useModal } from "../hooks/useModal";
+import { SunIcon } from "./Icons/SunIcon";
 
 export const Topbar = ({ allowHeader }) => {
     const [header, setHeader] = useState(false);
+    const modalController = useModal();
+
     useEffect(() => {
         document.addEventListener("scroll", () => {
             let scrollY = window.pageYOffset;
@@ -21,15 +26,40 @@ export const Topbar = ({ allowHeader }) => {
 
     return (
         <TopbarContainer header={allowHeader ? header : true}>
-            <Logo size="2rem" />
+            <Logo name="topbar-logo" size="2rem" />
             <SearchForm name="search-form" padding="0.65rem 0" />
             <RightGroup>
-                <PrimaryButton name="join-btn" label="Join" />
                 <TransparentButton
-                    name="menu-btn"
-                    icon={<MenuIcon color="textColor" />}
+                    width="fit-content"
+                    name="menu-item-btn"
+                    label="Upload"
+                />
+                <TransparentButton
+                    width="fit-content"
+                    name="menu-item-btn"
+                    label="About"
+                />
+                <TransparentButton
+                    width="fit-content"
+                    name="menu-item-btn"
+                    label="Contact us"
+                />
+                <TransparentButton
+                    width="fit-content"
+                    name="menu-item-btn theme-toggler"
+                    icon={<SunIcon name="sun" size="0.9" />}
+                />
+                <PrimaryButton
+                    name="join-btn"
+                    label="Join"
+                    handleClick={modalController.Show}
                 />
             </RightGroup>
+            <TransparentButton
+                name="menu-btn"
+                icon={<MenuIcon color="textColor" />}
+            />
+            <LoginModal modalController={modalController} />
         </TopbarContainer>
     );
 };

@@ -3,14 +3,46 @@ import styled from "styled-components";
 export const FocusedGifContainer = styled.section`
     display: flex;
     flex-direction: column;
-    margin-top: 5rem;
-    padding: 1rem;
     gap: 1rem;
     color: ${({ theme }) => theme.textColor};
+
+    @media screen and (max-width: 600px) {
+        margin: 6.5rem 0.7rem;
+    }
+
+    @media screen and (min-width: 600px) {
+        margin: 6.5rem;
+    }
+
+    @media screen and (min-width: 768px) {
+        margin: 6.5rem;
+    }
+
+    @media screen and (min-width: 992px) {
+        display: grid;
+        grid-template-columns: 7rem auto 18rem;
+        gap: 2rem;
+        margin: 6.5rem 3rem;
+    }
+
+    @media screen and (min-width: 1200px) {
+        display: grid;
+        grid-template-columns: 6.5rem auto 22rem;
+        gap: 2rem;
+        margin: 7.5rem 6rem 0 6rem;
+    }
 `;
 
-export const GifTitle = styled.h3`
+export const GifTitle = styled.h1`
     font-weight: 600;
+    text-transform: capitalize;
+`;
+
+export const GifDataSection = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
 `;
 
 export const BtnGroup = styled.div`
@@ -18,57 +50,34 @@ export const BtnGroup = styled.div`
     justify-content: space-around;
     align-items: center;
     gap: 0.6rem;
-    margin-top: 0.5rem;
-    margin-bottom: -0.3rem;
+    margin-top: 1rem;
 `;
 
-export const ActionBtn = styled.button`
+export const BackLink = styled.button`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0.35rem 0;
-    width: 100%;
+    padding: 0.3rem 1rem 0.3rem 0.6rem;
+    width: fit-content;
+    height: fit-content;
     border: 0;
-    gap: 0.3rem;
     outline: none;
-    border: 1px solid ${({ theme }) => theme.hoverColor};
-    background-color: ${({ theme }) => theme.backgroundColor};
-    color: ${({ theme }) => theme.textColorAlt};
-    border-radius: 5px;
+    background-color: ${({ theme }) => theme.backgroundColorAlt};
+    color: ${({ theme }) => theme.grayColor};
+    font-size: 0.81rem;
+    border-radius: 24px;
     transition: all 300ms ease;
-    font-size: 0.82rem;
+
     svg {
-        transform: scale(0.8);
-        fill: ${({ theme }) => theme.textColorAlt};
+        fill: ${({ theme }) => theme.grayColor};
+        transform: scale(0.85);
     }
     &:hover {
         cursor: pointer;
-        color: ${({ theme }) => theme.textColor};
+        color: ${({ theme }) => theme.textColorAlt};
         background-color: ${({ theme }) => theme.hoverColor};
         svg {
-            fill: ${({ theme }) => theme.textColor};
-        }
-    }
-`;
-
-export const DownloadBtn = styled(ActionBtn)`
-    padding: 0.5rem 0;
-    background-color: ${({ theme }) => theme.blueColor};
-    border: none;
-    color: ${({ theme }) => theme.whiteColor};
-    font-size: 0.85rem;
-    font-weight: 500;
-    svg {
-        transform: scale(0.9);
-        fill: ${({ theme }) => theme.whiteColor};
-    }
-    &:hover {
-        cursor: pointer;
-        filter: brightness(1.2);
-        color: ${({ theme }) => theme.whiteColor};
-        background-color: ${({ theme }) => theme.blueColor};
-        svg {
-            fill: ${({ theme }) => theme.whiteColor};
+            fill: ${({ theme }) => theme.textColorAlt};
         }
     }
 `;

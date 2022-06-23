@@ -2,9 +2,10 @@ import React from "react";
 import { ResultsContainer, ResultTitle } from "../styles/ResultsSection";
 import { GifGrid } from "./GifGrid";
 import { useGifGetter } from "../hooks/useGifGetter";
+import { OutlineButton } from "./OutlineButton";
 
 export const ResultsSection = ({ q }) => {
-    const [data, error, loading, pagination] = useGifGetter(q, 25, 0);
+    const [data, error, loading, pagination] = useGifGetter(q, 100, 0);
     return (
         <ResultsContainer>
             <ResultTitle>
@@ -14,6 +15,7 @@ export const ResultsSection = ({ q }) => {
                 )}
             </ResultTitle>
             <GifGrid data={data} loading={loading} error={error} />
+            <OutlineButton label ="Load more"/>
         </ResultsContainer>
     );
 };
