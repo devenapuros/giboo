@@ -28,7 +28,7 @@ export const LoginModal = ({ modalController }) => {
         );
 
     return (
-        <ModalBackground visible={modalController.visible}>
+        <ModalBackground visible={modalController.isVisible}>
             <ModalCard>
                 <CloseModalBtn onClick={modalController.Hide}>
                     <CloseIcon />

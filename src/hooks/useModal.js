@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export const useModal = () => {
-    const [visible, setVisible] = useState(false);
+    const [isVisible, setVisible] = useState(false);
 
     const Show = () => {
         setVisible(true);
@@ -13,5 +13,5 @@ export const useModal = () => {
         document.body.style.overflow = "auto";
     };
 
-    return { visible, Show, Hide };
+    return { isVisible, Show, Hide };
 };

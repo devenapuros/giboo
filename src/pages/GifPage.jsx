@@ -4,7 +4,7 @@ import { Topbar } from "../components/Topbar";
 
 export const GifPage = ({ id }) => {
     return (
-        <React.Fragment>
+        <React.Fragment> 
             <Topbar />
             <FocusedGifSection id={id} />
         </React.Fragment>

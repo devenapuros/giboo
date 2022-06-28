@@ -1,13 +1,11 @@
-import React from "react";
-import { ErrorContainer, Input, InputContainer } from "../styles/SearchInput";
+import { Input, InputContainer } from "../styles/SearchInput";
 import { SearchIcon } from "./Icons/SearchIcon";
 import { TransparentButton } from "./TransparentButton";
-import { ErrorIcon } from "./Icons/ErrorIcon";
 
 export const SearchInput = ({
     name,
     value,
-    error,
+    inputClass,
     isFocus,
     placeholder,
     handleChange,
@@ -16,7 +14,7 @@ export const SearchInput = ({
     padding,
 }) => {
     return (
-        <InputContainer focus={isFocus}>
+        <InputContainer focus={isFocus} className={inputClass}>
             <Input
                 type="text"
                 name={name}

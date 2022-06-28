@@ -1,9 +1,12 @@
 import styled from "styled-components";
 
 export const SearchRecomendationContainer = styled.button`
-    display: inline-block;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 0.5rem;
     padding: 0.35rem 1.3rem;
-    margin: 0 0.4rem 0.4rem 0;
+    margin: 0;
     border: 1px solid ${({ theme }) => theme.hoverColor};
     color: ${({ theme }) => theme.textColorAlt};
     outline: none;

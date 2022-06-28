@@ -4,15 +4,16 @@ export const OutlineBtn = styled.button`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0.35rem 0;
-    width: 100%;
+    padding: ${({ padding }) => padding || "0.35rem 0"};
+    margin: ${({ margin }) => margin || "0"};
+    width: ${({ width }) => width || "100%"};
     border: 0;
     gap: 0.3rem;
     outline: none;
     border: 1px solid ${({ theme }) => theme.hoverColor};
     background-color: ${({ theme }) => theme.backgroundColor};
     color: ${({ theme }) => theme.textColorAlt};
-    border-radius: 5px;
+    border-radius: ${({ borderRadius }) => borderRadius || "5px"};
     transition: all 300ms ease;
     font-size: 0.82rem;
     svg {

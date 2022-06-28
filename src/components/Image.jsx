@@ -4,6 +4,7 @@ import { ImageContainer, Img } from "../styles/Image";
 export const Image = ({
     id,
     src,
+    alt,
     contWidth,
     contHeight,
     imgWidth,
@@ -17,7 +18,7 @@ export const Image = ({
                 height={contHeight}
                 hoverable={hoverable}
             >
-                <Img src={src} alt="" width={imgWidth} height={imgHeight} />
+                <Img src={src} width={imgWidth} height={imgHeight} alt={alt} />
             </ImageContainer>
         </Link>
     );

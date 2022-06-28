@@ -3,11 +3,11 @@ import styled from "styled-components";
 export const TopSectionContainer = styled.section`
     display: flex;
     flex-direction: column;
-    gap: 0.7rem;
+    gap: 1rem;
     width: 100%;
-    button {
-        color: ${({ theme }) => theme.grayColor};
-    }
+    border-bottom: 1px solid ${({ theme }) => theme.hoverColor};
+    padding-bottom: 2.5rem;
+    margin-bottom: 2.5rem;
 `;
 
 export const TitleSection = styled.div`
@@ -15,22 +15,10 @@ export const TitleSection = styled.div`
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    h2 {
-        color: ${({ theme }) => theme.textColorAlt};
+    h1 {
+        color: ${({ theme }) => theme.textColor};
         font-weight: 600;
+        font-size: 2.3rem;
         text-transform: capitalize;
-    }
-    button.transparent-btn {
-        color: ${({ theme }) => theme.grayColor};
-        svg {
-            fill: ${({ theme }) => theme.grayColor};
-        }
-    }
-    button.transparent-btn:hover {
-        cursor: pointer;
-        color: ${({ theme }) => theme.whiteColor};
-        svg {
-            fill: ${({ theme }) => theme.textColor};
-        }
     }
 `;

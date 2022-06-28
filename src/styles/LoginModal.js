@@ -1,9 +1,8 @@
 /* eslint-disable indent */
 import styled from "styled-components";
-import { PrimaryBtn } from "./Button";
 
 export const ModalBackground = styled.section`
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     min-width: 100vw;
@@ -12,6 +11,7 @@ export const ModalBackground = styled.section`
     justify-content: center;
     align-items: center;
     background-color: #000000c0;
+    z-index: 4;
 `;
 
 export const ModalCard = styled.div`
@@ -49,17 +49,27 @@ export const ModalCard = styled.div`
     }
 `;
 
-export const CloseModalBtn = styled(PrimaryBtn)`
+export const CloseModalBtn = styled.button`
     position: absolute;
     padding: 0;
     top: 0rem;
     right: -2rem;
     height: 26px;
     width: 26px;
+    border: 0;
+    outline: none;
     border-radius: 5px;
+    background-color: transparent;
     svg {
-        fill: ${({ theme }) => theme.whiteColor};
-        transform: scale(0.9);
+        transition: all 300ms ease;
+        fill: ${({ theme }) => theme.grayColor};
+        transform: scale(1.2);
+        &:hover {
+            fill: ${({ theme }) => theme.whiteColor};
+        }
+    }
+    &:hover {
+        cursor: pointer;
     }
 `;
 

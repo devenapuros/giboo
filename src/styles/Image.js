@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ImageContainer = styled.div`
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
     overflow: hidden;
     border-radius: 5px;
@@ -10,7 +10,6 @@ export const ImageContainer = styled.div`
     width: ${({ width }) => width || "3rem"};
     height: ${({ height }) => height || "3rem"};
     min-width: ${({ width }) => width || "3rem"};
-    min-height: 3rem;
     background-color: ${({ theme }) => theme.hoverColor};
     &:hover {
         cursor: ${({ hoverable }) => (hoverable ? "pointer" : "default")};
@@ -18,26 +17,33 @@ export const ImageContainer = styled.div`
 
     @media screen and (max-width: 600px) {
         margin-bottom: 0.7rem;
+        min-height: 3rem;
     }
 
     @media screen and (min-width: 600px) {
         margin-bottom: 1rem;
+        min-height: 3rem;
     }
 
     @media screen and (min-width: 768px) {
         margin-bottom: 1.5rem;
+        min-height: 4rem;
     }
 
     @media screen and (min-width: 992px) {
         margin-bottom: 2rem;
+        min-height: 5rem;
     }
 
     @media screen and (min-width: 1200px) {
         margin-bottom: 2rem;
+        min-height: 6rem;
     }
 `;
 
 export const Img = styled.img`
+    color: ${({ theme }) => theme.grayColor};
+    font-size: 0.8rem;
     width: ${({ width }) => width || "3rem"};
     height: ${({ height }) => height || "3rem"};
     min-width: ${({ width }) => width || "3rem"};

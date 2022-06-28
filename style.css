@@ -25,4 +25,38 @@
     --fg: #ffffffff;
     --ac: #5297c5;
     --asd: #2980b9;
+
+    --yellow: #ffb453;
+    --yellow-alt: #e9c46a;
+    --blue: #79b8ff;
+    --red: #ff7070;
+    --purple: #b392f0;
+}
+
+.topbar-border {
+    border-bottom: 1px solid var(--hover-color);
+}
+
+.topbar .menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.topbar ul li {
+    width: 4rem;
+    transition: all 300ms linear;
+}
+
+.topbar ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: var(--gray-color);
+    font-size: 0.83rem;
+    font-weight: 500;
+    transition: all 300ms linear;
 }

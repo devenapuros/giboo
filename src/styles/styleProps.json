@@ -12,7 +12,7 @@
         "grayColor": "#666666",
         "blackColor": "#151515",
         "whiteColor": "#fefefe",
-        "hoverColor": "#00000025",
+        "hoverColor": "#00000018",
         "shadow": "rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;"
     },
     "dark": {

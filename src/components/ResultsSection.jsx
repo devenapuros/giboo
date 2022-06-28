@@ -5,7 +5,7 @@ import { useGifGetter } from "../hooks/useGifGetter";
 import { OutlineButton } from "./OutlineButton";
 
 export const ResultsSection = ({ q }) => {
-    const [data, error, loading, pagination] = useGifGetter(q, 100, 0);
+    const [data, error, loading, pagination] = useGifGetter(q, 120, 0);
     return (
         <ResultsContainer>
             <ResultTitle>
@@ -15,7 +15,15 @@ export const ResultsSection = ({ q }) => {
                 )}
             </ResultTitle>
             <GifGrid data={data} loading={loading} error={error} />
-            <OutlineButton label ="Load more"/>
+            {!loading && (
+                <OutlineButton
+                    name="load-more"
+                    label="Load more"
+                    width="30rem"
+                    margin="0 auto"
+                    padding="0.7rem"
+                />
+            )}
         </ResultsContainer>
     );
 };

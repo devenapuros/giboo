@@ -12,6 +12,9 @@ export const TransparentBtn = styled.button`
     transition: all 300ms ease;
     &:hover {
         cursor: pointer;
+        svg {
+            fill: ${({ theme }) => theme.textColorAlt};
+        }
     }
     ${({ disabled }) =>
         disabled &&
@@ -21,4 +24,7 @@ export const TransparentBtn = styled.button`
                 fill: ${({ theme }) => theme.grayColor} !important;
             }
         `}
+    svg {
+        fill: ${({ theme }) => theme.grayColor};
+    }
 `;

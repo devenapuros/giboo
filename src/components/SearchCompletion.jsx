@@ -1,38 +1,35 @@
-import React from "react";
-import {
-    SearchCompletionContainer,
-    SearchOptionList,
-    SecTitle,
-} from "../styles/SearchCompletion";
-import { SearchRecomendation } from "./SearchRecomendation";
+import { useLocation } from "wouter";
+import { SearchCompletionContainer } from "../styles/SearchCompletion";
+import { PopularSearchs } from "./PopularSearchs";
+import { RecentSearchs } from "./RecentSearchs";
 
-export const SearchCompletion = ({ visible, onClickRecomendation }) => {
-    
+const recentSearchs = [
+    "cat",
+    "fun",
+    "avengers",
+    "clapton",
+    "sad",
+    "meme",
+    "emo",
+];
+
+export const SearchCompletion = ({ visible, setVisible }) => {
+    // eslint-disable-next-line no-unused-vars
+    const [location, setLocation] = useLocation();
+    const handleClick = (keyword) => {
+        setVisible(false);
+        setLocation(`/search/${keyword}`);
+    };
+
     return (
         <SearchCompletionContainer visible={visible}>
-            <SecTitle className="title">Popular searchs</SecTitle>
-            <SearchOptionList>
-                <SearchRecomendation
-                    handleClick={onClickRecomendation}
-                    label="panda"
+            {recentSearchs.length > 0 && (
+                <RecentSearchs
+                    recentSearchs={recentSearchs}
+                    handleClick={handleClick}
                 />
-                <SearchRecomendation
-                    handleClick={onClickRecomendation}
-                    label="cat"
-                />
-                <SearchRecomendation
-                    handleClick={onClickRecomendation}
-                    label="matrix"
-                />
-                <SearchRecomendation
-                    handleClick={onClickRecomendation}
-                    label="meme"
-                />
-                <SearchRecomendation
-                    handleClick={onClickRecomendation}
-                    label="fall"
-                />
-            </SearchOptionList>
+            )}
+            <PopularSearchs handleClick={handleClick} />
         </SearchCompletionContainer>
     );
 };

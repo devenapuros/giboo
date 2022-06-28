@@ -5,13 +5,15 @@ import { PrimaryButton } from "./PrimaryButton";
 import { TransparentButton } from "./TransparentButton";
 import { MenuIcon } from "./Icons/MenuIcon";
 import { SearchForm } from "./SearchForm";
-import { LoginModal } from "./LoginModal";
-import { useModal } from "../hooks/useModal";
 import { SunIcon } from "./Icons/SunIcon";
+import { useTheme } from "../context/themeContext";
+import { MoonIcon } from "./Icons/MoonIcon";
+import { useModalContext } from "../context/modalContext";
 
 export const Topbar = ({ allowHeader }) => {
     const [header, setHeader] = useState(false);
-    const modalController = useModal();
+    const modalController = useModalContext();
+    const { theme, handleTheme } = useTheme();
 
     useEffect(() => {
         document.addEventListener("scroll", () => {
@@ -23,11 +25,10 @@ export const Topbar = ({ allowHeader }) => {
             }
         });
     }, []);
-
     return (
         <TopbarContainer header={allowHeader ? header : true}>
             <Logo name="topbar-logo" size="2rem" />
-            <SearchForm name="search-form" padding="0.65rem 0" />
+            <SearchForm name="search-form" padding="0.6rem 0" />
             <RightGroup>
                 <TransparentButton
                     width="fit-content"
@@ -37,17 +38,25 @@ export const Topbar = ({ allowHeader }) => {
                 <TransparentButton
                     width="fit-content"
                     name="menu-item-btn"
-                    label="About"
+                    label="Explore"
                 />
                 <TransparentButton
                     width="fit-content"
                     name="menu-item-btn"
-                    label="Contact us"
+                    label="About"
                 />
+
                 <TransparentButton
                     width="fit-content"
                     name="menu-item-btn theme-toggler"
-                    icon={<SunIcon name="sun" size="0.9" />}
+                    handleClick={handleTheme}
+                    icon={
+                        theme === "dark" ? (
+                            <SunIcon name="sun" size="0.9" />
+                        ) : (
+                            <MoonIcon name="moon" size="0.9" />
+                        )
+                    }
                 />
                 <PrimaryButton
                     name="join-btn"
@@ -59,7 +68,6 @@ export const Topbar = ({ allowHeader }) => {
                 name="menu-btn"
                 icon={<MenuIcon color="textColor" />}
             />
-            <LoginModal modalController={modalController} />
         </TopbarContainer>
     );
 };

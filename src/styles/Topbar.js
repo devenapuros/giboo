@@ -31,6 +31,10 @@ export const TopbarContainer = styled.nav`
             .search-form {
                 display: flex;
             }
+            .search-form .search-input {
+                background-color: ${({ theme }) => theme.hoverColor};
+                border: 0;
+            }
             .menu-item-btn {
                 text-shadow: none !important;
                 color: ${({ theme }) => theme.textColor} !important;
@@ -128,9 +132,9 @@ export const RightGroup = styled.ul`
     .menu-item-btn {
         padding: 0.3rem 0.7rem;
         color: ${({ theme }) => theme.whiteColor};
-        text-shadow: #000000 0px 0px 10px;
+        /* text-shadow: #000000 0px 0px 10px; */
         border-radius: 24px;
-        font-size: 0.92rem;
+        font-size: 0.95rem;
         font-weight: 500;
         &:hover {
             background-color: ${({ theme }) => theme.hoverColor};
@@ -140,6 +144,9 @@ export const RightGroup = styled.ul`
     .theme-toggler {
         svg.sun {
             fill: ${({ theme }) => theme.yellowColor};
+        }
+        svg.moon {
+            fill: ${({ theme }) => theme.blueColor};
         }
     }
 `;

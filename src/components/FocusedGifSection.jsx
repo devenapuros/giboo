@@ -24,11 +24,15 @@ export const FocusedGifSection = ({ id }) => {
             <FocusedGifContainer>
                 <RectangleSkeleton width="70%" height="0.8rem" />
                 <RectangleSkeleton width="100%" height="14rem" />
-                <BtnGroup>
+
+                <GifDataSection>
+                    <RectangleSkeleton width="100%" height="1rem" />
+                    <BtnGroup>
+                        <RectangleSkeleton width="49%" height="2.5rem" />
+                        <RectangleSkeleton width="49%" height="2.5rem" />
+                    </BtnGroup>
                     <RectangleSkeleton width="49%" height="2.5rem" />
-                    <RectangleSkeleton width="49%" height="2.5rem" />
-                </BtnGroup>
-                <RectangleSkeleton width="100%" height="2.5rem" />
+                </GifDataSection>
             </FocusedGifContainer>
         );
 

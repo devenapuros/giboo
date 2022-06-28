@@ -1,1 +1,22 @@
-["panda", "cat", "matrix", "meme", "fall"]
+[
+    {
+        "keyword": "panda",
+        "thumbnail": "/panda.gif"
+    },
+    {
+        "keyword": "cat",
+        "thumbnail": "/cat.gif"
+    },
+    {
+        "keyword": "matrix",
+        "thumbnail": "/matrix.gif"
+    },
+    {
+        "keyword": "meme",
+        "thumbnail": "/meme.gif"
+    },
+    {
+        "keyword":"dog",
+        "thumbnail": "/dog.gif"
+    }
+]

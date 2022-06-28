@@ -6,9 +6,9 @@ import popularSearchs from "../constants/popularSearchs.json";
 export const MainTops = () => {
     return (
         <TopsListContainer>
-            <h1 className="title">Popular Searchs</h1>
+            <h2 className="title">Popular Searchs</h2>
             {popularSearchs.map((item) => (
-                <TopSection key={item} keyword={item} />
+                <TopSection key={item.keyword} item={item} />
             ))}
         </TopsListContainer>
     );

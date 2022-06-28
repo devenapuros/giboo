@@ -6,8 +6,8 @@ export const HeaderContainer = styled.header`
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    height: 75vh;
-    background: url("/public/child.gif");
+    height: 70vh;
+    background: url("/public/pc.gif");
     background-position: 50% 50%;
     background-size: cover;
     color: ${({ theme }) => theme.whiteColor};
@@ -26,7 +26,7 @@ export const SearchSection = styled.div`
         line-height: 38px;
         font-size: 1.6rem;
         font-weight: 550;
-        text-shadow: #000000 0px 0px 10px;
+        /* text-shadow: #000000 0px 0px 10px; */
     }
 
     @media screen and (max-width: 600px) {

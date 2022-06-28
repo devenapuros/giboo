@@ -6,6 +6,12 @@ export const ResultsContainer = styled.section`
     gap: 1rem;
     color: ${({ theme }) => theme.textColor};
 
+    .load-more {
+        font-weight: 600;
+        font-size: 1rem;
+        color: ${({ theme }) => theme.grayColor};
+    }
+
     @media screen and (max-width: 600px) {
         margin: 6.5rem 0.7rem 1rem 0.7rem;
         div > h1 {

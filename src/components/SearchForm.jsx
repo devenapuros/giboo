@@ -34,11 +34,6 @@ export const SearchForm = ({ name, padding }) => {
 
     useClickOutsideListener(wrapperRef, hideCompletionDialog);
 
-    const onClickRecomendation = (label) => {
-        hideCompletionDialog();
-        setLocation(`/search/${label}`);
-    };
-
     return (
         <Form
             onSubmit={formController.handleSubmit}
@@ -47,6 +42,7 @@ export const SearchForm = ({ name, padding }) => {
         >
             <SearchInput
                 name="search"
+                inputClass="search-input"
                 value={formController.state.fields.search}
                 error={formController.state.fieldErrors.search}
                 handleChange={formController.handleChange}
@@ -57,7 +53,7 @@ export const SearchForm = ({ name, padding }) => {
             />
             <SearchCompletion
                 visible={completionVisible}
-                onClickRecomendation={onClickRecomendation}
+                setVisible={setCompletionVisible}
             />
         </Form>
     );

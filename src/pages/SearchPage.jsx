@@ -1,5 +1,6 @@
 import React from "react";
 import { Redirect } from "wouter";
+import { Footer } from "../components/Footer";
 import { ResultsSection } from "../components/ResultsSection";
 import { Topbar } from "../components/Topbar";
 
@@ -9,6 +10,7 @@ export const SearchPage = ({ q }) => {
         <React.Fragment>
             <Topbar />
             <ResultsSection q={q} />
+            <Footer />
         </React.Fragment>
     );
 };

@@ -1,16 +1,10 @@
-import { GifContainer } from "../styles/GifHorizontalScroll";
-import { RectangleSkeleton } from "./RectangleSkeleton";
+import { GifContainer } from "../styles/GifGrid";
+// import { RectangleSkeleton } from "./RectangleSkeleton";
 import { Image } from "./Image";
+import { Loader } from "./Loader";
 
 export const GifGrid = ({ data, loading, error }) => {
-    if (loading)
-        return (
-            <GifContainer>
-                {Array.from({ length: 30 }).map((item, index) => (
-                    <RectangleSkeleton key={index} name="gif-skeleton" height="10rem" width="100%" />
-                ))}
-            </GifContainer>
-        );
+    if (loading) return <Loader />;
     if (error) return <GifContainer>{error}</GifContainer>;
     else
         return (
@@ -21,6 +15,7 @@ export const GifGrid = ({ data, loading, error }) => {
                             hoverable={true}
                             key={item.id}
                             id={item.id}
+                            alt={item.title}
                             src={item.images.original.url}
                             contWidth="100%"
                             contHeight="fit-content"
@@ -31,3 +26,11 @@ export const GifGrid = ({ data, loading, error }) => {
             </GifContainer>
         );
 };
+
+{
+    /* <GifContainer>
+                {Array.from({ length: 30 }).map((item, index) => (
+                    <RectangleSkeleton key={index} name="gif-skeleton" height="10rem" width="100%" />
+                ))}
+            </GifContainer> */
+}
