@@ -15,7 +15,7 @@
     "plugins": ["react"],
     "rules": {
         "indent": ["warn", 4],
-        "linebreak-style": ["warn", "unix"],
+        // "linebreak-style": ["warn", "unix"],
         "quotes": ["warn", "double"],
         "semi": ["warn", "always"],
         "react/react-in-jsx-scope": "off",

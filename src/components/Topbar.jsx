@@ -1,18 +1,16 @@
 import { useEffect, useState } from "react";
 import { RightGroup, TopbarContainer } from "../styles/Topbar";
 import { Logo } from "./Logo";
-import { PrimaryButton } from "./PrimaryButton";
 import { TransparentButton } from "./TransparentButton";
 import { MenuIcon } from "./Icons/MenuIcon";
 import { SearchForm } from "./SearchForm";
 import { SunIcon } from "./Icons/SunIcon";
 import { useTheme } from "../context/themeContext";
 import { MoonIcon } from "./Icons/MoonIcon";
-import { useModalContext } from "../context/modalContext";
+import { AuthWidget } from "./AuthWidget";
 
 export const Topbar = ({ allowHeader }) => {
     const [header, setHeader] = useState(false);
-    const modalController = useModalContext();
     const { theme, handleTheme } = useTheme();
 
     useEffect(() => {
@@ -58,11 +56,7 @@ export const Topbar = ({ allowHeader }) => {
                         )
                     }
                 />
-                <PrimaryButton
-                    name="join-btn"
-                    label="Join"
-                    handleClick={modalController.Show}
-                />
+                <AuthWidget />
             </RightGroup>
             <TransparentButton
                 name="menu-btn"

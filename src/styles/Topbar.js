@@ -35,7 +35,8 @@ export const TopbarContainer = styled.nav`
                 background-color: ${({ theme }) => theme.hoverColor};
                 border: 0;
             }
-            .menu-item-btn {
+            .menu-item-btn,
+            .user-btn {
                 text-shadow: none !important;
                 color: ${({ theme }) => theme.textColor} !important;
             }

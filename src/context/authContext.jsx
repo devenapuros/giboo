@@ -1,4 +1,5 @@
-import { createContext, useContext, useEffect, useState } from "react";
+/* eslint-disable no-unused-vars */
+import { createContext, useContext, useState } from "react";
 
 export const authContext = createContext();
 
@@ -9,7 +10,10 @@ export const useAuth = () => {
 };
 
 export function AuthProvider({ children }) {
-    const [user, setUser] = useState(null);
+    const [user, setUser] = useState({
+        username: "misterrobotow",
+        avatar: "/dog.gif",
+    });
     const [loading, setLoading] = useState(true);
 
     const signup = (username, email, password) => {

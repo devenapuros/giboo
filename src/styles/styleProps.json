@@ -29,6 +29,6 @@
         "blackColor": "#151515",
         "whiteColor": "#fefefe",
         "hoverColor": "#ffffff15",
-        "shadow": " rgba(0, 0, 0, 1) 0px 10px 10px -10px;"
+        "shadow": " rgba(0, 0, 0, 0.7) 0px 10px 10px -10px;"
     }
 }
