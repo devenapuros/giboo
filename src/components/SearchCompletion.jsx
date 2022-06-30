@@ -1,19 +1,11 @@
 import { useLocation } from "wouter";
+import { useRecentSearchsContext } from "../context/recentSearchsContext";
 import { SearchCompletionContainer } from "../styles/SearchCompletion";
 import { PopularSearchs } from "./PopularSearchs";
 import { RecentSearchs } from "./RecentSearchs";
 
-const recentSearchs = [
-    "cat",
-    "fun",
-    "avengers",
-    "clapton",
-    "sad",
-    "meme",
-    "emo",
-];
-
 export const SearchCompletion = ({ visible, setVisible }) => {
+    const { searchs } = useRecentSearchsContext();
     // eslint-disable-next-line no-unused-vars
     const [location, setLocation] = useLocation();
     const handleClick = (keyword) => {
@@ -23,12 +15,7 @@ export const SearchCompletion = ({ visible, setVisible }) => {
 
     return (
         <SearchCompletionContainer visible={visible}>
-            {recentSearchs.length > 0 && (
-                <RecentSearchs
-                    recentSearchs={recentSearchs}
-                    handleClick={handleClick}
-                />
-            )}
+            {searchs.size > 0 && <RecentSearchs handleClick={handleClick} />}
             <PopularSearchs handleClick={handleClick} />
         </SearchCompletionContainer>
     );

@@ -6,9 +6,11 @@ import { searchFormValidator } from "../modules/searchFormValidator";
 import { Form } from "../styles/SearchForm";
 import { SearchCompletion } from "./SearchCompletion";
 import { SearchInput } from "./SearchInput";
+import { useRecentSearchsContext } from "../context/recentSearchsContext";
 
 export const SearchForm = ({ name, padding }) => {
     const [completionVisible, setCompletionVisible] = useState(false);
+    const { addSearch } = useRecentSearchsContext();
     const wrapperRef = useRef(null);
     // eslint-disable-next-line no-unused-vars
     const [location, setLocation] = useLocation();
@@ -22,6 +24,7 @@ export const SearchForm = ({ name, padding }) => {
 
     const doOnSubmit = () => {
         hideCompletionDialog();
+        addSearch(formController.state.fields.search);
         setLocation(`/search/${formController.state.fields.search}`);
         formController.resetForm();
     };
