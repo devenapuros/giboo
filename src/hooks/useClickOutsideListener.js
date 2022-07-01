@@ -11,7 +11,7 @@ export function useClickOutsideListener(ref, doOnClickOutside) {
         function handleClickOutside(event) {
             if (ref.current && !ref.current.contains(event.target)) {
                 // console.log("You clicked outside of:", ref);
-                doOnClickOutside();
+                doOnClickOutside(ref, event);
             }
         }
         // Bind the event listener

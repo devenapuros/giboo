@@ -7,9 +7,11 @@ export const TransparentButton = ({
     disabled,
     width,
     handleClick,
+    elementRef,
 }) => {
     return (
         <TransparentBtn
+            ref={elementRef}
             className={name || "transparent-btn"}
             disabled={disabled}
             width={width}

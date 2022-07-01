@@ -20,6 +20,18 @@ export const TopbarContainer = styled.nav`
         display: none;
     }
 
+    ${({ blackice, theme }) =>
+        blackice &&
+        css`
+            .menu-item-btn,
+            .user-btn {
+                color: ${({ theme }) => theme.textColor};
+            }
+            .menu-btn svg {
+                fill: ${({ theme }) => theme.textColor};
+            }
+        `};
+
     ${({ header, theme }) =>
         header &&
         css`
@@ -125,6 +137,7 @@ export const RightGroup = styled.div`
 `;
 
 export const Menu = styled(RightGroup)`
+    transition: all 300ms ease;
     .menu-item-btn {
         padding: 0.3rem 0.7rem;
         color: ${({ theme }) => theme.whiteColor};
@@ -147,7 +160,6 @@ export const Menu = styled(RightGroup)`
 
     @media screen and (max-width: 600px) {
         position: absolute;
-        display: flex;
         top: 0;
         left: 0;
         flex-direction: column;
@@ -159,6 +171,14 @@ export const Menu = styled(RightGroup)`
         .menu-item-btn {
             color: ${({ theme }) => theme.textColor};
         }
+        ${({ visible }) =>
+            visible
+                ? css`
+                      transform: translate(0);
+                  `
+                : css`
+                      transform: translateY(-100vh);
+                  `}
     }
 
     @media screen and (min-width: 600px) and (max-width: 992px) {

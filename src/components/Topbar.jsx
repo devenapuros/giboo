@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Menu, RightGroup, TopbarContainer } from "../styles/Topbar";
 import { Logo } from "./Logo";
 import { TransparentButton } from "./TransparentButton";
@@ -8,10 +8,23 @@ import { SunIcon } from "./Icons/SunIcon";
 import { useTheme } from "../context/themeContext";
 import { MoonIcon } from "./Icons/MoonIcon";
 import { AuthWidget } from "./AuthWidget";
+import { CloseIcon } from "./Icons/CloseIcon";
+import { useClickOutsideListener } from "../hooks/useClickOutsideListener";
 
 export const Topbar = ({ allowHeader }) => {
     const [header, setHeader] = useState(false);
+    const [menuVisible, setMenuVisible] = useState(false);
     const { theme, handleTheme } = useTheme();
+    const menuRef = useRef();
+    const menuBtnRef = useRef();
+
+    const autoHideMenu = (ref, event) => {
+        if (menuRef.current && !menuRef.current.contains(event.target)) {
+            setMenuVisible(false);
+        }
+    };
+
+    useClickOutsideListener(menuRef, autoHideMenu);
 
     useEffect(() => {
         document.addEventListener("scroll", () => {
@@ -24,11 +37,11 @@ export const Topbar = ({ allowHeader }) => {
         });
     }, []);
     return (
-        <TopbarContainer header={allowHeader ? header : true}>
+        <TopbarContainer header={allowHeader ? header : true} blackice={menuVisible}>
             <Logo name="topbar-logo" size="2rem" />
             <SearchForm name="search-form" padding="0.6rem 0" />
             <RightGroup>
-                <Menu className="Menu">
+                <Menu visible={menuVisible} ref={menuRef}>
                     <TransparentButton
                         width="fit-content"
                         name="menu-item-btn"
@@ -61,9 +74,17 @@ export const Topbar = ({ allowHeader }) => {
                 <RightGroup>
                     <AuthWidget />
                     <TransparentButton
+                        elementRef={menuBtnRef}
+                        handleClick={() => setMenuVisible(!menuVisible)}
                         name="menu-btn"
                         width="fit-content"
-                        icon={<MenuIcon color="textColor" />}
+                        icon={
+                            menuVisible ? (
+                                <CloseIcon />
+                            ) : (
+                                <MenuIcon color="textColor" />
+                            )
+                        }
                     />
                 </RightGroup>
             </RightGroup>
