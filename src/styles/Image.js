@@ -17,27 +17,27 @@ export const ImageContainer = styled.div`
 
     @media screen and (max-width: 600px) {
         margin-bottom: 0.7rem;
-        min-height: 3rem;
+        min-height: 3.5rem;
     }
 
     @media screen and (min-width: 600px) {
         margin-bottom: 1rem;
-        min-height: 3rem;
+        min-height: 5rem;
     }
 
     @media screen and (min-width: 768px) {
         margin-bottom: 1.5rem;
-        min-height: 4rem;
+        min-height: 8rem;
     }
 
     @media screen and (min-width: 992px) {
         margin-bottom: 2rem;
-        min-height: 5rem;
+        min-height: 9rem;
     }
 
     @media screen and (min-width: 1200px) {
         margin-bottom: 2rem;
-        min-height: 6rem;
+        min-height: 10rem;
     }
 `;
 

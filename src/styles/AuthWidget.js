@@ -35,6 +35,12 @@ export const UserButton = styled.button`
         css`
             background-color: ${theme.hoverColor};
         `}
+
+    @media screen and (max-width: 600px) {
+        .user-name {
+            max-width: 8.5rem;
+        }
+    }
 `;
 
 export const AvatarContainer = styled.div`

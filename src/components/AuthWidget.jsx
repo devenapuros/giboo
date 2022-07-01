@@ -27,13 +27,13 @@ export const AuthWidget = () => {
 
     if (user)
         return (
-            <AuthWidgetContainer ref={wrapperRef}>
+            <AuthWidgetContainer ref={wrapperRef} className="auth-widget">
                 <UserButton
                     className="user-btn"
                     active={menuVisible}
                     onClick={() => setMenuVisible(!menuVisible)}
                 >
-                    <span>{user.username}</span>
+                    <span className="user-name">{user.username}</span>
                     <AvatarContainer>
                         <UserAvatar src={user.avatar} />
                     </AvatarContainer>
@@ -69,10 +69,6 @@ export const AuthWidget = () => {
         );
     else
         return (
-            <PrimaryButton
-                name="join-btn"
-                label="Join"
-                handleClick={modalController.Show}
-            />
+            <PrimaryButton label="Join" handleClick={modalController.Show} />
         );
 };

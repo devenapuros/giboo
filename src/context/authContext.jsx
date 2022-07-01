@@ -36,3 +36,8 @@ export function AuthProvider({ children }) {
         </authContext.Provider>
     );
 }
+
+// {
+//     username: "misterrobotow",
+//     avatar: "/dog.gif",
+// }

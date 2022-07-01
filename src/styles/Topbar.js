@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import styled, { css } from "styled-components";
 
 export const TopbarContainer = styled.nav`
@@ -9,7 +10,7 @@ export const TopbarContainer = styled.nav`
     align-items: center;
     gap: 1rem;
     padding: 0.6rem 0.8rem;
-    z-index: 2;
+    z-index: 1;
     transition: all 300ms ease;
 
     .menu-btn svg {
@@ -25,9 +26,6 @@ export const TopbarContainer = styled.nav`
             background-color: ${theme.backgroundColorAlt};
             box-shadow: ${theme.shadow};
 
-            .join-btn {
-                display: none;
-            }
             .search-form {
                 display: flex;
             }
@@ -40,10 +38,20 @@ export const TopbarContainer = styled.nav`
                 text-shadow: none !important;
                 color: ${({ theme }) => theme.textColor} !important;
             }
+            .menu-btn svg {
+                fill: ${({ theme }) => theme.textColor};
+            }
         `};
 
     @media screen and (max-width: 600px) {
         padding: 0.6rem 0.8rem;
+        ${({ header }) =>
+            header &&
+            css`
+                .auth-widget {
+                    display: none;
+                }
+            `}
     }
 
     @media screen and (min-width: 600px) {
@@ -53,9 +61,6 @@ export const TopbarContainer = styled.nav`
         }
         .search-form {
             width: 36rem;
-        }
-        .join-btn {
-            display: flex;
         }
         .search-form input {
             padding: 0.8rem 0;
@@ -73,14 +78,11 @@ export const TopbarContainer = styled.nav`
         .search-form {
             width: 36rem;
         }
-        .join-btn {
-            display: flex;
-        }
         .search-form input {
             padding: 0.8rem 0;
         }
         .menu-btn {
-            display: none;
+            display: flex;
         }
     }
 
@@ -91,9 +93,6 @@ export const TopbarContainer = styled.nav`
         }
         .search-form {
             max-width: 30rem;
-        }
-        .join-btn {
-            display: flex;
         }
         .search-form input {
             padding: 0.8rem 0;
@@ -111,29 +110,24 @@ export const TopbarContainer = styled.nav`
         .search-form {
             max-width: 30rem;
         }
-        .join-btn {
-            display: flex;
-        }
         .search-form input {
             padding: 0.8rem 0;
-        }
-        .menu-btn {
-            display: none;
         }
     }
 `;
 
-export const RightGroup = styled.ul`
+export const RightGroup = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
     width: fit-content;
-    gap: 1.3rem;
+    gap: 1rem;
+`;
 
+export const Menu = styled(RightGroup)`
     .menu-item-btn {
         padding: 0.3rem 0.7rem;
         color: ${({ theme }) => theme.whiteColor};
-        /* text-shadow: #000000 0px 0px 10px; */
         border-radius: 24px;
         font-size: 0.95rem;
         font-weight: 500;
@@ -148,6 +142,39 @@ export const RightGroup = styled.ul`
         }
         svg.moon {
             fill: ${({ theme }) => theme.blueColor};
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        position: absolute;
+        display: flex;
+        top: 0;
+        left: 0;
+        flex-direction: column;
+        padding: 5rem 1rem 1rem 1rem;
+        width: 100vw;
+        z-index: -10;
+        background-color: ${({ theme }) => theme.backgroundColorAlt};
+        box-shadow: ${({ theme }) => theme.shadow};
+        .menu-item-btn {
+            color: ${({ theme }) => theme.textColor};
+        }
+    }
+
+    @media screen and (min-width: 600px) and (max-width: 992px) {
+        position: absolute;
+        display: flex;
+        top: 100%;
+        right: 0.8rem;
+        flex-direction: column;
+        align-items: start;
+        padding: 1rem;
+        width: 12rem;
+        background-color: ${({ theme }) => theme.backgroundColorAlt};
+        border: 1px solid ${({ theme }) => theme.hoverColor};
+        border-radius: 5px;
+        .menu-item-btn {
+            color: ${({ theme }) => theme.textColor};
         }
     }
 `;

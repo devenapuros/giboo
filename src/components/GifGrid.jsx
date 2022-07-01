@@ -1,5 +1,4 @@
 import { GifContainer } from "../styles/GifGrid";
-// import { RectangleSkeleton } from "./RectangleSkeleton";
 import { Image } from "./Image";
 import { Loader } from "./Loader";
 

@@ -17,9 +17,11 @@ export const ResultsContainer = styled.section`
         div > h1 {
             font-size: 3rem;
         }
-
         div > span {
             font-size: 1.2rem;
+        }
+        .result-title {
+            font-size: 2rem;
         }
     }
 

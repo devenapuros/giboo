@@ -6,7 +6,7 @@ import { RightArrow } from "./Icons/RightArrow";
 import { useLocation } from "wouter";
 
 export const TopSection = ({ item }) => {
-    const [data, error, loading] = useGifGetter(item.keyword, 10, 0);
+    const [data, error, loading] = useGifGetter(item.keyword, 12, 0);
     // eslint-disable-next-line no-unused-vars
     const [location, setLocation] = useLocation();
 
@@ -17,8 +17,9 @@ export const TopSection = ({ item }) => {
     return (
         <TopSectionContainer>
             <TitleSection>
-                <h1>{item.keyword} Gifs</h1>
+                <h1 className="top-title">{item.keyword} Gifs</h1>
                 <OutlineButton
+                    name="see-more-btn"
                     label="See more"
                     width="10rem"
                     padding="0.5rem"

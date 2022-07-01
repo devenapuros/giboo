@@ -5,9 +5,9 @@ export const TopSectionContainer = styled.section`
     flex-direction: column;
     gap: 1rem;
     width: 100%;
-    border-bottom: 1px solid ${({ theme }) => theme.hoverColor};
-    padding-bottom: 2.5rem;
-    margin-bottom: 2.5rem;
+    /* border-bottom: 1px solid ${({ theme }) => theme.hoverColor}; */
+    /* padding-bottom: 2rem; */
+    margin-bottom: 2rem;
 `;
 
 export const TitleSection = styled.div`

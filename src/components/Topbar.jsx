@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { RightGroup, TopbarContainer } from "../styles/Topbar";
+import { Menu, RightGroup, TopbarContainer } from "../styles/Topbar";
 import { Logo } from "./Logo";
 import { TransparentButton } from "./TransparentButton";
 import { MenuIcon } from "./Icons/MenuIcon";
@@ -28,40 +28,45 @@ export const Topbar = ({ allowHeader }) => {
             <Logo name="topbar-logo" size="2rem" />
             <SearchForm name="search-form" padding="0.6rem 0" />
             <RightGroup>
-                <TransparentButton
-                    width="fit-content"
-                    name="menu-item-btn"
-                    label="Upload"
-                />
-                <TransparentButton
-                    width="fit-content"
-                    name="menu-item-btn"
-                    label="Explore"
-                />
-                <TransparentButton
-                    width="fit-content"
-                    name="menu-item-btn"
-                    label="About"
-                />
+                <Menu className="Menu">
+                    <TransparentButton
+                        width="fit-content"
+                        name="menu-item-btn"
+                        label="Upload"
+                    />
+                    <TransparentButton
+                        width="fit-content"
+                        name="menu-item-btn"
+                        label="Explore"
+                    />
+                    <TransparentButton
+                        width="fit-content"
+                        name="menu-item-btn"
+                        label="About"
+                    />
 
-                <TransparentButton
-                    width="fit-content"
-                    name="menu-item-btn theme-toggler"
-                    handleClick={handleTheme}
-                    icon={
-                        theme === "dark" ? (
-                            <SunIcon name="sun" size="0.9" />
-                        ) : (
-                            <MoonIcon name="moon" size="0.9" />
-                        )
-                    }
-                />
-                <AuthWidget />
+                    <TransparentButton
+                        width="fit-content"
+                        name="menu-item-btn theme-toggler"
+                        handleClick={handleTheme}
+                        icon={
+                            theme === "dark" ? (
+                                <SunIcon name="sun" size="0.9" />
+                            ) : (
+                                <MoonIcon name="moon" size="0.9" />
+                            )
+                        }
+                    />
+                </Menu>
+                <RightGroup>
+                    <AuthWidget />
+                    <TransparentButton
+                        name="menu-btn"
+                        width="fit-content"
+                        icon={<MenuIcon color="textColor" />}
+                    />
+                </RightGroup>
             </RightGroup>
-            <TransparentButton
-                name="menu-btn"
-                icon={<MenuIcon color="textColor" />}
-            />
         </TopbarContainer>
     );
 };
