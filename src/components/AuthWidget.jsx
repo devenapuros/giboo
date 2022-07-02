@@ -69,6 +69,10 @@ export const AuthWidget = () => {
         );
     else
         return (
-            <PrimaryButton label="Join" handleClick={modalController.Show} />
+            <PrimaryButton
+                name="auth-widget"
+                label="Join"
+                handleClick={modalController.Show}
+            />
         );
 };

@@ -1,14 +1,13 @@
 import { useEffect, useRef, useState } from "react";
-import { Menu, RightGroup, TopbarContainer } from "../styles/Topbar";
+import { Menu, MenuBtn, RightGroup, TopbarContainer } from "../styles/Topbar";
 import { Logo } from "./Logo";
 import { TransparentButton } from "./TransparentButton";
-import { MenuIcon } from "./Icons/MenuIcon";
 import { SearchForm } from "./SearchForm";
 import { SunIcon } from "./Icons/SunIcon";
 import { useTheme } from "../context/themeContext";
 import { MoonIcon } from "./Icons/MoonIcon";
 import { AuthWidget } from "./AuthWidget";
-import { CloseIcon } from "./Icons/CloseIcon";
+import { ChevronIcon } from "./Icons/ChevronIcon";
 import { useClickOutsideListener } from "../hooks/useClickOutsideListener";
 
 export const Topbar = ({ allowHeader }) => {
@@ -19,7 +18,8 @@ export const Topbar = ({ allowHeader }) => {
     const menuBtnRef = useRef();
 
     const autoHideMenu = (ref, event) => {
-        if (menuRef.current && !menuRef.current.contains(event.target)) {
+        if (menuBtnRef.current && !menuBtnRef.current.contains(event.target)) {
+            console.log("hide menu");
             setMenuVisible(false);
         }
     };
@@ -36,8 +36,12 @@ export const Topbar = ({ allowHeader }) => {
             }
         });
     }, []);
+
     return (
-        <TopbarContainer header={allowHeader ? header : true} blackice={menuVisible}>
+        <TopbarContainer
+            header={allowHeader ? header : true}
+            blackice={menuVisible}
+        >
             <Logo name="topbar-logo" size="2rem" />
             <SearchForm name="search-form" padding="0.6rem 0" />
             <RightGroup>
@@ -73,19 +77,14 @@ export const Topbar = ({ allowHeader }) => {
                 </Menu>
                 <RightGroup>
                     <AuthWidget />
-                    <TransparentButton
-                        elementRef={menuBtnRef}
-                        handleClick={() => setMenuVisible(!menuVisible)}
-                        name="menu-btn"
-                        width="fit-content"
-                        icon={
-                            menuVisible ? (
-                                <CloseIcon />
-                            ) : (
-                                <MenuIcon color="textColor" />
-                            )
-                        }
-                    />
+                    <MenuBtn
+                        ref={menuBtnRef}
+                        active={menuVisible}
+                        onClick={() => setMenuVisible(!menuVisible)}
+                        className={`menu-btn ${menuVisible && "showing-menu"}`}
+                    >
+                        <ChevronIcon />
+                    </MenuBtn>
                 </RightGroup>
             </RightGroup>
         </TopbarContainer>

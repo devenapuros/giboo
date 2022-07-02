@@ -13,31 +13,15 @@ export const TopbarContainer = styled.nav`
     z-index: 1;
     transition: all 300ms ease;
 
-    .menu-btn svg {
-        fill: ${({ theme }) => theme.whiteColor};
-    }
     .search-form {
         display: none;
     }
-
-    ${({ blackice, theme }) =>
-        blackice &&
-        css`
-            .menu-item-btn,
-            .user-btn {
-                color: ${({ theme }) => theme.textColor};
-            }
-            .menu-btn svg {
-                fill: ${({ theme }) => theme.textColor};
-            }
-        `};
 
     ${({ header, theme }) =>
         header &&
         css`
             background-color: ${theme.backgroundColorAlt};
             box-shadow: ${theme.shadow};
-
             .search-form {
                 display: flex;
             }
@@ -47,7 +31,6 @@ export const TopbarContainer = styled.nav`
             }
             .menu-item-btn,
             .user-btn {
-                text-shadow: none !important;
                 color: ${({ theme }) => theme.textColor} !important;
             }
             .menu-btn svg {
@@ -64,6 +47,17 @@ export const TopbarContainer = styled.nav`
                     display: none;
                 }
             `}
+        ${({ blackice, theme }) =>
+            blackice &&
+            css`
+                .menu-item-btn,
+                .user-btn {
+                    color: ${theme.textColor};
+                }
+                .menu-btn svg {
+                    fill: ${theme.textColor} !important;
+                }
+            `};
     }
 
     @media screen and (min-width: 600px) {
@@ -136,6 +130,27 @@ export const RightGroup = styled.div`
     gap: 1rem;
 `;
 
+export const MenuBtn = styled.button`
+    background-color: ${({ active, theme }) =>
+        active ? theme.hoverColor : "transparent"};
+    padding: 0.4rem;
+    border: 0;
+    outline: none;
+    border-radius: 100%;
+    svg {
+        transition: all 300ms ease;
+        fill: ${({ theme }) => theme.whiteColor};
+        transform: scale(1.1);
+    }
+    &.showing-menu svg {
+        transform: rotate(-180deg);
+    }
+    &:hover {
+        cursor: pointer;
+        background-color: ${({ theme }) => theme.hoverColor};
+    }
+`;
+
 export const Menu = styled(RightGroup)`
     transition: all 300ms ease;
     .menu-item-btn {
@@ -181,11 +196,11 @@ export const Menu = styled(RightGroup)`
                   `}
     }
 
-    @media screen and (min-width: 600px) and (max-width: 992px) {
+    @media screen and (min-width: 601px) and (max-width: 992px) {
         position: absolute;
         display: flex;
-        top: 100%;
-        right: 0.8rem;
+        top: 91%;
+        right: 1.3rem;
         flex-direction: column;
         align-items: start;
         padding: 1rem;
@@ -193,8 +208,17 @@ export const Menu = styled(RightGroup)`
         background-color: ${({ theme }) => theme.backgroundColorAlt};
         border: 1px solid ${({ theme }) => theme.hoverColor};
         border-radius: 5px;
+        box-shadow: ${({ theme }) => theme.shadow};
         .menu-item-btn {
             color: ${({ theme }) => theme.textColor};
         }
+        ${({ visible }) =>
+            visible
+                ? css`
+                      display: flex;
+                  `
+                : css`
+                      display: none;
+                  `}
     }
 `;
