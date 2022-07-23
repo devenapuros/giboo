@@ -1,25 +1,18 @@
-import styled, { keyframes } from "styled-components";
-
-const shadowEffect = keyframes`
-    0% {
-        filter: drop-shadow(3px 3px 5px #00a6fb60);
-    }
-
-    100% {
-        filter: drop-shadow(3px 3px 5px #f7258560);
-    }
-`;
+import styled from "styled-components";
 
 export const LogoContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
     height: ${({ size }) => size || "500px"};
-    width: fit-content;
+    width: ${({ size }) => size || "500px"};
+    min-width: ${({ size }) => size || "500px"};
+    object-fit: contain;
+    border-radius: 8px;
+    overflow: hidden;
     img {
-        width: auto;
+        width: 100%;
         height: 100%;
-        animation: ${shadowEffect} 3s alternate infinite;
     }
     &:hover {
         cursor: pointer;

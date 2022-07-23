@@ -6,7 +6,7 @@ export const Logo = ({ size, name }) => {
     return (
         <LogoContainer className={name || "logo"} size={size}>
             <Link href="/">
-                <img src="/public/Logo.png" alt="" />
+                <img src="/public/logo.png" alt="" />
             </Link>
         </LogoContainer>
     );

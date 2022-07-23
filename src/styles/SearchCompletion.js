@@ -15,4 +15,5 @@ export const SearchCompletionContainer = styled.div`
     border-top: 0;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 20px 25px -5px, rgba(0, 0, 0, 0.02) 0px 10px 10px -5px;
 `;

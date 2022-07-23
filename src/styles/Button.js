@@ -7,10 +7,11 @@ export const Btn = styled.button`
     padding: 0.5rem 1rem;
     border: 0;
     outline: none;
-    border-radius: 5px;
+    border-radius: 8px;
     font-size: 0.95rem;
     font-weight: 600;
     transition: all 300ms ease;
+    gap: 0.4rem;
     &:hover {
         filter: brightness(1.2);
         cursor: pointer;

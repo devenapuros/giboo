@@ -57,19 +57,19 @@ export const BackLink = styled.button`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0.3rem 1rem 0.3rem 0.6rem;
+    padding: 0.4rem 1rem 0.4rem 0.6rem;
     width: fit-content;
     height: fit-content;
     border: 0;
     outline: none;
     background-color: ${({ theme }) => theme.backgroundColorAlt};
-    color: ${({ theme }) => theme.grayColor};
+    color: ${({ theme }) => theme.textColorAlt};
     font-size: 0.81rem;
     border-radius: 24px;
     transition: all 300ms ease;
 
     svg {
-        fill: ${({ theme }) => theme.grayColor};
+        fill: ${({ theme }) => theme.textColorAlt};
         transform: scale(0.85);
     }
     &:hover {

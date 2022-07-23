@@ -14,9 +14,9 @@ export const SearchRecomendationContainer = styled.button`
     font-weight: 500;
     text-align: start;
     text-transform: capitalize;
-    background-color: ${({ theme }) => theme.backgroundColorAlt};
+    background-color: transparent;
     transition: all 300ms ease;
-    border-radius: 5px;
+    border-radius: 8px;
     &:hover {
         cursor: pointer;
         color: ${({ theme }) => theme.textColor};

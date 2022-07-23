@@ -42,7 +42,7 @@ export const Topbar = ({ allowHeader }) => {
             header={allowHeader ? header : true}
             blackice={menuVisible}
         >
-            <Logo name="topbar-logo" size="2rem" />
+            <Logo name="topbar-logo" size="2.5rem" />
             <SearchForm name="search-form" padding="0.6rem 0" />
             <RightGroup>
                 <Menu visible={menuVisible} ref={menuRef}>

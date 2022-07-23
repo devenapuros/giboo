@@ -28,6 +28,7 @@ export const TopbarContainer = styled.nav`
             .search-form .search-input {
                 background-color: ${({ theme }) => theme.hoverColor};
                 border: 0;
+                box-shadow: none;
             }
             .menu-item-btn,
             .user-btn {
@@ -35,6 +36,11 @@ export const TopbarContainer = styled.nav`
             }
             .menu-btn svg {
                 fill: ${({ theme }) => theme.textColor};
+            }
+            .theme-toggler {
+                svg {
+                    fill: ${({ theme }) => theme.textColor} !important;
+                }
             }
         `};
 
@@ -57,14 +63,17 @@ export const TopbarContainer = styled.nav`
                 .menu-btn svg {
                     fill: ${theme.textColor} !important;
                 }
+                .theme-toggler {
+                    svg {
+                        fill: ${({ theme }) => theme.textColor} !important;
+                    }
+                }
             `};
     }
 
     @media screen and (min-width: 600px) {
         padding: 0.6rem 0.8rem;
-        .topbar-logo {
-            height: 2.5rem;
-        }
+
         .search-form {
             width: 36rem;
         }
@@ -78,9 +87,7 @@ export const TopbarContainer = styled.nav`
 
     @media screen and (min-width: 768px) {
         padding: 0.6rem 1.5rem;
-        .topbar-logo {
-            height: 2.5rem;
-        }
+
         .search-form {
             width: 36rem;
         }
@@ -94,9 +101,7 @@ export const TopbarContainer = styled.nav`
 
     @media screen and (min-width: 992px) {
         padding: 0.6rem 4rem;
-        .topbar-logo {
-            height: 2.5rem;
-        }
+
         .search-form {
             max-width: 30rem;
         }
@@ -110,9 +115,7 @@ export const TopbarContainer = styled.nav`
 
     @media screen and (min-width: 1200px) {
         padding: 0.6rem 4rem;
-        .topbar-logo {
-            height: 2.8rem;
-        }
+
         .search-form {
             max-width: 30rem;
         }
@@ -165,11 +168,8 @@ export const Menu = styled(RightGroup)`
     }
 
     .theme-toggler {
-        svg.sun {
-            fill: ${({ theme }) => theme.yellowColor};
-        }
-        svg.moon {
-            fill: ${({ theme }) => theme.blueColor};
+        svg {
+            fill: ${({ theme }) => theme.whiteColor};
         }
     }
 

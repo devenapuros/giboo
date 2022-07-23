@@ -5,7 +5,7 @@ export const ImageContainer = styled.div`
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    border-radius: 5px;
+    border-radius: 8px;
     margin-bottom: 1rem;
     width: ${({ width }) => width || "3rem"};
     height: ${({ height }) => height || "3rem"};
