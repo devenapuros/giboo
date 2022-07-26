@@ -2,8 +2,8 @@
     "light": {
         "backgroundColor": "#f3f4f6",
         "backgroundColorAlt": "#fff",
-        "textColor": "#222",
-        "textColorAlt": "#333",
+        "textColor": "#252525",
+        "textColorAlt": "#444",
         "blueColor": "#00a6fb",
         "redColor" : "#e74c3c",
         "pinkColor": "#f72585",

@@ -42,10 +42,16 @@ export const TopbarContainer = styled.nav`
                     fill: ${({ theme }) => theme.textColor} !important;
                 }
             }
+            .brand {
+                color: ${({ theme }) => theme.textColorAlt};
+            }
         `};
 
     @media screen and (max-width: 600px) {
         padding: 0.6rem 0.8rem;
+        .brand h1 {
+            display: none;
+        }
         ${({ header }) =>
             header &&
             css`
@@ -122,6 +128,29 @@ export const TopbarContainer = styled.nav`
         .search-form input {
             padding: 0.8rem 0;
         }
+    }
+`;
+
+export const Brand = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: ${({ theme }) => theme.whiteColor};
+    h1 {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+    .purple {
+        color: #9772fb;
+    }
+    .deeppink {
+        color: #f72585;
+    }
+    .orange {
+        color: orange;
+    }
+    &:hover {
+        cursor: pointer;
     }
 `;
 

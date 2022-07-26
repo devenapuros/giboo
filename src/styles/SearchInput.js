@@ -10,7 +10,7 @@ export const InputContainer = styled.div`
     padding: 0 0.6rem 0 0.8rem;
     gap: 0.5rem;
     width: 100% !important;
-    border-radius: 6px;
+    border-radius: 8px;
     transition: all 300ms ease;
     z-index: 0;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 8px 24px;

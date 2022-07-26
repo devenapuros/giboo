@@ -1,5 +1,10 @@
 import React from "react";
-import { FooterBrand, FooterContainer, FooterSection } from "../styles/Footer";
+import {
+    FooterBrand,
+    FooterContainer,
+    FooterLogo,
+    FooterSection,
+} from "../styles/Footer";
 import { Logo } from "./Logo";
 
 export const Footer = () => {
@@ -7,7 +12,14 @@ export const Footer = () => {
         <React.Fragment>
             <FooterContainer>
                 <FooterSection className="footer-brand">
-                    <Logo size="4rem" />
+                    <FooterLogo className="brand">
+                        <Logo name="topbar-logo" size="4rem" />
+                        <h1>
+                            Gi<span className="purple">b</span>
+                            <span className="deeppink">o</span>
+                            <span className="orange">o</span>
+                        </h1>
+                    </FooterLogo>
                     <p>
                         From cats to memes. Hundreds and hundreds of funny gifs
                         waiting to be discovered.

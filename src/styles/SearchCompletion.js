@@ -13,7 +13,7 @@ export const SearchCompletionContainer = styled.div`
     background-color: ${({ theme }) => theme.backgroundColorAlt};
     border: 1px solid ${({ theme }) => theme.hoverColor};
     border-top: 0;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.02) 0px 20px 25px -5px, rgba(0, 0, 0, 0.02) 0px 10px 10px -5px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 20px 25px -5px, rgba(0, 0, 0, 0.02) 0px 10px 10px -5px;
 `;

@@ -7,7 +7,7 @@ export const HeaderContainer = styled.header`
     align-items: center;
     gap: 1rem;
     height: 70vh;
-    background: url("/modern.jpg");
+    background: url("/header.jpg");
     background-position: 50% 50%;
     background-size: cover;
     color: ${({ theme }) => theme.whiteColor};

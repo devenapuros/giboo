@@ -1,6 +1,7 @@
 import {
     CardBody,
     CloseModalBtn,
+    LoginBrand,
     LoginWithGoogleBtn,
     ModalBackground,
     ModalCard,
@@ -51,7 +52,14 @@ export const LoginModal = ({ modalController }) => {
                     visible={currentTab === "login"}
                     className="card-body"
                 >
-                    <Logo size="4rem" />
+                    <LoginBrand className="brand">
+                        <Logo name="topbar-logo" size="4rem" />
+                        <h1>
+                            Gi<span className="purple">b</span>
+                            <span className="deeppink">o</span>
+                            <span className="orange">o</span>
+                        </h1>
+                    </LoginBrand>
                     <SmallText>Login with your email account</SmallText>
                     <ModalForm>
                         <Input label="Email" placeholder="Enter your email" />
@@ -68,8 +76,18 @@ export const LoginModal = ({ modalController }) => {
                         Google
                     </LoginWithGoogleBtn>
                 </CardBody>
-                <CardBody visible={currentTab === "register"} className="card-body">
-                    <Logo size="4rem" />
+                <CardBody
+                    visible={currentTab === "register"}
+                    className="card-body"
+                >
+                    <LoginBrand className="brand">
+                        <Logo name="topbar-logo" size="4rem" />
+                        <h1>
+                            Gi<span className="purple">b</span>
+                            <span className="deeppink">o</span>
+                            <span className="orange">o</span>
+                        </h1>
+                    </LoginBrand>
                     <SmallText>Join and get cool features</SmallText>
                     <ModalForm>
                         <Input

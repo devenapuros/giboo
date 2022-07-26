@@ -1,5 +1,11 @@
 import { useEffect, useRef, useState } from "react";
-import { Menu, MenuBtn, RightGroup, TopbarContainer } from "../styles/Topbar";
+import {
+    Brand,
+    Menu,
+    MenuBtn,
+    RightGroup,
+    TopbarContainer,
+} from "../styles/Topbar";
 import { Logo } from "./Logo";
 import { TransparentButton } from "./TransparentButton";
 import { SearchForm } from "./SearchForm";
@@ -9,6 +15,7 @@ import { MoonIcon } from "./Icons/MoonIcon";
 import { AuthWidget } from "./AuthWidget";
 import { ChevronIcon } from "./Icons/ChevronIcon";
 import { useClickOutsideListener } from "../hooks/useClickOutsideListener";
+import { Link } from "wouter";
 
 export const Topbar = ({ allowHeader }) => {
     const [header, setHeader] = useState(false);
@@ -42,7 +49,16 @@ export const Topbar = ({ allowHeader }) => {
             header={allowHeader ? header : true}
             blackice={menuVisible}
         >
-            <Logo name="topbar-logo" size="2.5rem" />
+            <Link href="/">
+                <Brand className="brand">
+                    <Logo name="topbar-logo" size="2.5rem" />
+                    <h1>
+                        Gi<span className="purple">b</span>
+                        <span className="deeppink">o</span>
+                        <span className="orange">o</span>
+                    </h1>
+                </Brand>
+            </Link>
             <SearchForm name="search-form" padding="0.6rem 0" />
             <RightGroup>
                 <Menu visible={menuVisible} ref={menuRef}>

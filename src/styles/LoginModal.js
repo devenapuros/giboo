@@ -129,3 +129,26 @@ export const LoginWithGoogleBtn = styled.button`
         cursor: pointer;
     }
 `;
+
+export const LoginBrand = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    color: ${({ theme }) => theme.textColorAlt};
+    h1 {
+        font-size: 2.7rem;
+        font-weight: 700;
+    }
+    .purple {
+        color: #9772fb;
+    }
+    .deeppink {
+        color: #f72585;
+    }
+    .orange {
+        color: orange;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+`;

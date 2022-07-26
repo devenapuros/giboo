@@ -7,7 +7,7 @@ export const SearchItemContainer = styled.div`
     align-items: center;
     transition: all 300ms ease;
     padding: 0.4rem 0.4rem 0.4rem 0.8rem;
-    border-radius: 5px;
+    border-radius: 8px;
     border: 1px solid ${({ theme }) => theme.hoverColor};
     outline: none;
     background-color: transparent;

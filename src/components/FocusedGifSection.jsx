@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
     BackLink,
     BtnGroup,
@@ -18,6 +18,10 @@ import { OutlineButton } from "./OutlineButton";
 
 export const FocusedGifSection = ({ id }) => {
     const [data, error, loading] = useFocusedGif(id);
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     if (loading)
         return (
