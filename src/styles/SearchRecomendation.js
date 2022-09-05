@@ -7,7 +7,7 @@ export const SearchRecomendationContainer = styled.button`
     gap: 0.5rem;
     padding: 0.35rem 1.3rem;
     margin: 0;
-    border: 1px solid ${({ theme }) => theme.hoverColor};
+    border: 2px solid ${({ theme }) => theme.hoverColor};
     color: ${({ theme }) => theme.textColorAlt};
     outline: none;
     font-size: 0.85rem;

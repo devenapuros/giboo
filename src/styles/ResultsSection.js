@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ResultsContainer = styled.section`
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
     color: ${({ theme }) => theme.textColor};
 
     .load-more {
@@ -61,7 +61,7 @@ export const ResultsContainer = styled.section`
     @media screen and (min-width: 1200px) {
         margin: 7.5rem 4.5rem 1rem 4.5rem;
         div > h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
         }
 
         div > small {

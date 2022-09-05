@@ -27,7 +27,7 @@ export const TopbarContainer = styled.nav`
             }
             .search-form .search-input {
                 background-color: ${({ theme }) => theme.hoverColor};
-                border: 0;
+                border: 2px solid ${({ theme }) => theme.hoverColor};
                 box-shadow: none;
             }
             .menu-item-btn,
@@ -137,7 +137,7 @@ export const Brand = styled.div`
     gap: 0.5rem;
     color: ${({ theme }) => theme.whiteColor};
     h1 {
-        font-size: 2rem;
+        font-size: 1.9rem;
         font-weight: 700;
     }
     .purple {

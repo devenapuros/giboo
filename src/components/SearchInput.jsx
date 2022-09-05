@@ -24,6 +24,8 @@ export const SearchInput = ({
                 onFocus={handleFocus}
                 onBlur={handleBlur}
                 padding={padding}
+                autoComplete="off"
+                
             />
             <TransparentButton
                 name="search-btn"

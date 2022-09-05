@@ -4,7 +4,7 @@ import { GifGrid } from "./GifGrid";
 import { useGifGetter } from "../hooks/useGifGetter";
 
 export const ResultsSection = ({ q }) => {
-    const [data, error, loading, pagination] = useGifGetter(q, 24, 0);
+    const [data, error, loading, pagination] = useGifGetter(q, 12, 0);
     return (
         <ResultsContainer>
             <ResultTitle>

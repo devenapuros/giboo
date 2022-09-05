@@ -11,7 +11,7 @@ export const SearchCompletionContainer = styled.div`
     gap: 1.5rem;
     color: ${({ theme }) => theme.textColor};
     background-color: ${({ theme }) => theme.backgroundColorAlt};
-    border: 1px solid ${({ theme }) => theme.hoverColor};
+    border: 2px solid ${({ theme }) => theme.hoverColor};
     border-top: 0;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;

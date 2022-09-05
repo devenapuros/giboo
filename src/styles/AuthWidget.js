@@ -67,10 +67,10 @@ export const UserMenu = styled.ul`
     display: ${({ visible }) => (visible ? "flex" : "none")};
     color: ${({ theme }) => theme.textColor};
     background-color: ${({ theme }) => theme.backgroundColorAlt};
-    border: 1px solid ${({ theme }) => theme.hoverColor};
-    font-size: 0.9rem;
+    border: 2px solid ${({ theme }) => theme.hoverColor};
+    font-size: 1rem;
     padding: 1rem;
-    border-radius: 5px;
+    border-radius: 8px;
     box-shadow: ${({ theme }) => theme.shadow};
     li {
         margin: 0;

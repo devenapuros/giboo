@@ -21,6 +21,7 @@ export const Btn = styled.button`
 export const PrimaryBtn = styled(Btn)`
     background-color: ${({ theme }) => theme.blueColor};
     color: ${({ theme }) => theme.whiteColor};
+    border: 2px solid ${({ theme }) => theme.hoverColor};
     svg {
         transform: scale(0.9);
         fill: ${({ theme }) => theme.whiteColor};

@@ -1,16 +1,28 @@
 import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    height: 70vh;
-    background: url("/header.jpg");
-    background-position: 50% 50%;
-    background-size: cover;
+    height: 75vh;
     color: ${({ theme }) => theme.whiteColor};
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: url("/truck.jpg");
+        background-position: 0% 20%;
+        background-size: cover;
+        /* filter: brightness(0.95); */
+    }
 `;
 
 export const SearchSection = styled.div`
@@ -23,10 +35,8 @@ export const SearchSection = styled.div`
 
     .slogan {
         width: 100%;
-        line-height: 38px;
-        font-size: 1.6rem;
-        font-weight: 550;
-        text-shadow: #00000020 0px 0px 10px;
+        line-height: 45px;
+        text-shadow: #000000a0 0px 0px 15px;
     }
 
     @media screen and (max-width: 600px) {
@@ -54,8 +64,8 @@ export const SearchSection = styled.div`
         width: 48vw;
         .slogan {
             width: 100%;
-            font-size: 2rem;
-            font-weight: 550;
+            font-size: 2.2rem;
+            font-weight: 600;
         }
     }
 `;

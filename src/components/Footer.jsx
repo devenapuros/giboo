@@ -13,7 +13,7 @@ export const Footer = () => {
             <FooterContainer>
                 <FooterSection className="footer-brand">
                     <FooterLogo className="brand">
-                        <Logo name="topbar-logo" size="4rem" />
+                        <Logo name="topbar-logo" size="3.3rem" />
                         <h1>
                             Gi<span className="purple">b</span>
                             <span className="deeppink">o</span>
@@ -63,7 +63,7 @@ export const Footer = () => {
                 </FooterSection>
             </FooterContainer>
             <FooterBrand>
-                Developed by&nbsp;<a href="">@misterrobotow</a>
+                Developed by&nbsp;<a href="">@devenapuros 🚀</a>
             </FooterBrand>
         </React.Fragment>
     );

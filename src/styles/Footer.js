@@ -88,7 +88,7 @@ export const FooterLogo = styled.div`
     gap: 0.7rem;
     color: ${({ theme }) => theme.textColorAlt};
     h1 {
-        font-size: 2.7rem;
+        font-size: 2.5rem;
         font-weight: 700;
     }
     .purple {

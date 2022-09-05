@@ -8,6 +8,9 @@ export const LogoContainer = styled.div`
     width: ${({ size }) => size || "500px"};
     min-width: ${({ size }) => size || "500px"};
     object-fit: contain;
+    border-radius: 8px;
+    border: 2px solid ${({ theme }) => theme.hoverColor};
+    background-color: ${({ theme }) => theme.blueColor};
     overflow: hidden;
     img {
         width: 100%;

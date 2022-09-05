@@ -64,6 +64,7 @@ export const LoginModal = ({ modalController }) => {
                     <ModalForm>
                         <Input label="Email" placeholder="Enter your email" />
                         <Input
+                            type="password"
                             label="Password"
                             placeholder="Enter your password"
                         />

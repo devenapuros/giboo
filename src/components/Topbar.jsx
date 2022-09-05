@@ -51,7 +51,7 @@ export const Topbar = ({ allowHeader }) => {
         >
             <Link href="/">
                 <Brand className="brand">
-                    <Logo name="topbar-logo" size="2.5rem" />
+                    <Logo name="topbar-logo" size="2.8rem" />
                     <h1>
                         Gi<span className="purple">b</span>
                         <span className="deeppink">o</span>
