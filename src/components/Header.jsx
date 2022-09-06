@@ -1,4 +1,8 @@
-import { HeaderContainer, SearchSection } from "../styles/Header";
+import {
+    AttributionText,
+    HeaderContainer,
+    SearchSection,
+} from "../styles/Header";
 import { SearchForm } from "./SearchForm";
 import { Topbar } from "./Topbar";
 
@@ -14,6 +18,16 @@ export const Header = () => {
                 </h1>
                 <SearchForm />
             </SearchSection>
+            <AttributionText>
+                Image by{" "}
+                <a
+                    href="https://www.instagram.com/killerrabbitmedia/"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    @killerrabbitmedia
+                </a>
+            </AttributionText>
         </HeaderContainer>
     );
 };
