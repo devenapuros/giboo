@@ -6,7 +6,7 @@ export const InputContainer = styled.div`
     justify-content: center;
     align-items: center;
     background-color: ${({ theme }) => theme.backgroundColorAlt};
-    border: 2px solid ${({ theme }) => theme.backgroundColorAlt};
+    border: 2px solid ${({ theme }) => theme.hoverColor};
     padding: 0 0.5rem 0 0.8rem;
     gap: 0.5rem;
     width: 100% !important;

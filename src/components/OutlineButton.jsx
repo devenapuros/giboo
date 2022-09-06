@@ -10,6 +10,7 @@ export const OutlineButton = ({
     borderRadius,
     margin,
     name,
+    active,
 }) => {
     return (
         <OutlineBtn
@@ -19,6 +20,7 @@ export const OutlineButton = ({
             padding={padding}
             margin={margin}
             borderRadius={borderRadius}
+            active={active}
         >
             {leftIcon}
             {label}

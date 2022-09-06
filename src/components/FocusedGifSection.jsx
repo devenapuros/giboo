@@ -31,10 +31,7 @@ export const FocusedGifSection = ({ id }) => {
 
                 <GifDataSection>
                     <RectangleSkeleton width="100%" height="1rem" />
-                    <BtnGroup>
-                        <RectangleSkeleton width="49%" height="2.5rem" />
-                        <RectangleSkeleton width="49%" height="2.5rem" />
-                    </BtnGroup>
+                    <RectangleSkeleton width="49%" height="2.5rem" />
                     <RectangleSkeleton width="49%" height="2.5rem" />
                 </GifDataSection>
             </FocusedGifContainer>
@@ -58,17 +55,12 @@ export const FocusedGifSection = ({ id }) => {
                 />
                 <GifDataSection>
                     <GifTitle>{data?.title}</GifTitle>
-                    <BtnGroup>
-                        <OutlineButton
-                            label="Add to favorites"
-                            rightIcon={<HeartOutlineIcon />}
-                        />
-                        <OutlineButton
-                            label="Collect"
-                            rightIcon={<QueueIcon />}
-                        />
-                    </BtnGroup>
-                    <PrimaryButton label="Download" icon={<DownloadIcon />} />
+
+                    <OutlineButton
+                        label="Add to favorites"
+                        rightIcon={<HeartOutlineIcon />}
+                    />
+                    <OutlineButton label="Collect" rightIcon={<QueueIcon />} />
                 </GifDataSection>
             </FocusedGifContainer>
         );
