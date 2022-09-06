@@ -18,7 +18,6 @@ export const OutlineBtn = styled.button`
     font-size: 1rem;
     font-weight: 500;
     svg {
-        transform: scale(0.8);
         fill: ${({ theme }) => theme.textColorAlt};
     }
     &:hover {

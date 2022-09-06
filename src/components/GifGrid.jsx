@@ -25,11 +25,3 @@ export const GifGrid = ({ data, loading, error }) => {
             </GifContainer>
         );
 };
-
-{
-    /* <GifContainer>
-                {Array.from({ length: 30 }).map((item, index) => (
-                    <RectangleSkeleton key={index} name="gif-skeleton" height="10rem" width="100%" />
-                ))}
-            </GifContainer> */
-}

@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const GifContainer = styled.div`
     columns: 4 120px;
     column-gap: 1rem;
-    margin-bottom: 2rem;
 
     @media screen and (max-width: 600px) {
         columns: 2 120px;
