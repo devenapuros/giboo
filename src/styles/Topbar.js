@@ -8,7 +8,7 @@ export const TopbarContainer = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 1rem;
+    gap: 0.5rem;
     padding: 0.6rem 0.8rem;
     z-index: 1;
     transition: all 300ms ease;

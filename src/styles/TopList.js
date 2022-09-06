@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const TopsListContainer = styled.main`
     display: flex;
     flex-direction: column;
-    /* padding: 2rem 4.5rem; */
-    gap: 1rem;
+    text-align: center;
+    gap: 2rem;
     color: ${({ theme }) => theme.textColor};
     .title {
         font-weight: 600;
@@ -13,13 +13,6 @@ export const TopsListContainer = styled.main`
 
     @media screen and (max-width: 600px) {
         margin: 2rem 0.7rem 1rem 0.7rem;
-        .top-title {
-            font-size: 2rem;
-        }
-        .see-more-btn {
-            width: 9rem;
-            padding: 0.4rem;
-        }
     }
 
     @media screen and (min-width: 600px) {
@@ -35,6 +28,6 @@ export const TopsListContainer = styled.main`
     }
 
     @media screen and (min-width: 1200px) {
-        margin: 2rem 4.5rem 1rem 4.5rem;
+        margin: 2rem 5rem 1rem 5rem;
     }
 `;

@@ -5,7 +5,7 @@ import {
     MenuBtn,
     RightGroup,
     TopbarContainer,
-} from "../styles/Topbar";
+} from "@/styles/Topbar";
 import { Logo } from "./Logo";
 import { TransparentButton } from "./TransparentButton";
 import { SearchForm } from "./SearchForm";
@@ -36,7 +36,7 @@ export const Topbar = ({ allowHeader }) => {
     useEffect(() => {
         document.addEventListener("scroll", () => {
             let scrollY = window.pageYOffset;
-            if (scrollY > 60) {
+            if (scrollY > 40) {
                 setHeader(true);
             } else {
                 setHeader(false);

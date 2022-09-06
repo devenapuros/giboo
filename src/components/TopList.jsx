@@ -7,6 +7,8 @@ export const MainTops = () => {
     return (
         <TopsListContainer>
             <h2 className="title">Popular Searchs</h2>
+            <h2 className="title">Explore</h2>
+            <h2 className="title">Stickers</h2>
             {popularSearchs.map((item) => (
                 <TopSection key={item.keyword} item={item} />
             ))}

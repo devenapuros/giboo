@@ -18,17 +18,17 @@ export const TopSection = ({ item }) => {
         <TopSectionContainer>
             <TitleSection>
                 <h1 className="top-title">{item.keyword} Gifs</h1>
-                <OutlineButton
-                    name="see-more-btn"
-                    label="See more"
-                    width="10rem"
-                    padding="0.5rem"
-                    borderRadius="24px"
-                    rightIcon={<RightArrow />}
-                    handleClick={() => seeMoreClick(item.keyword)}
-                />
             </TitleSection>
             <GifGrid data={data} error={error} loading={loading} />
+            <OutlineButton
+                name="see-more-btn"
+                label="See more"
+                width="10rem"
+                padding="0.5rem"
+                borderRadius="24px"
+                rightIcon={<RightArrow />}
+                handleClick={() => seeMoreClick(item.keyword)}
+            />
         </TopSectionContainer>
     );
 };

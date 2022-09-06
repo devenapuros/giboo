@@ -1,4 +1,3 @@
-import React from "react";
 import { HeaderContainer, SearchSection } from "../styles/Header";
 import { SearchForm } from "./SearchForm";
 import { Topbar } from "./Topbar";
@@ -6,7 +5,7 @@ import { Topbar } from "./Topbar";
 export const Header = () => {
     return (
         <HeaderContainer>
-            <Topbar allowHeader={true}/>
+            <Topbar allowHeader={true} />
             {/* <Logo size="6rem" /> */}
             <SearchSection>
                 <h1 className="slogan">

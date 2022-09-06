@@ -19,9 +19,8 @@ export const HeaderContainer = styled.header`
         height: 100%;
         z-index: -1;
         background: url("/truck.jpg");
-        background-position: 0% 20%;
+        background-position: 50% 20%;
         background-size: cover;
-        /* filter: brightness(0.95); */
     }
 `;
 
