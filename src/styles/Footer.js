@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 export const FooterContainer = styled.footer`
     display: grid;
-    grid-template-columns: 25rem auto auto auto;
-    gap: 1.5rem;
-    margin-top: 2rem;
+    gap: 3rem;
+    justify-content: center;
+    margin-top: 3rem;
     color: ${({ theme }) => theme.textColor};
     padding: 4rem;
     background-color: ${({ theme }) => theme.backgroundColorAlt};
@@ -25,11 +25,11 @@ export const FooterContainer = styled.footer`
     }
 
     @media screen and (min-width: 992px) {
-        grid-template-columns: 25rem auto auto auto;
+        grid-template-columns: 350px auto auto auto;
     }
 
     @media screen and (min-width: 1200px) {
-        grid-template-columns: 25rem auto auto auto;
+        grid-template-columns: 400px auto auto auto;
     }
 `;
 
@@ -37,9 +37,9 @@ export const FooterSection = styled.section`
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    width: 100%;
-    max-width: 30rem;
+    width: fit-content;
     padding: 1rem;
+
     h3 {
         font-weight: 600;
         font-size: 1.1rem;
@@ -88,7 +88,7 @@ export const FooterLogo = styled.div`
     gap: 0.7rem;
     color: ${({ theme }) => theme.textColorAlt};
     h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
         font-weight: 700;
     }
     .purple {

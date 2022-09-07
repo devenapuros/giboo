@@ -13,7 +13,7 @@ export const Footer = () => {
             <FooterContainer>
                 <FooterSection className="footer-brand">
                     <FooterLogo className="brand">
-                        <Logo name="topbar-logo" size="3.3rem" />
+                        <Logo name="topbar-logo" size="3rem" />
                         <h1>
                             Gi<span className="purple">b</span>
                             <span className="deeppink">o</span>
