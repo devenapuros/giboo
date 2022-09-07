@@ -10,10 +10,8 @@ import { FocusedImage } from "./FocusedImage";
 import { useFocusedGif } from "../hooks/useFocusedGif";
 import { RectangleSkeleton } from "./RectangleSkeleton";
 import { HeartOutlineIcon } from "./Icons/HeartOutlineIcon";
-import { DownloadIcon } from "./Icons/DownloadIcon";
 import { QueueIcon } from "./Icons/QueueIcon";
 import { LeftArrowIcon } from "./Icons/LeftArrowIcon";
-import { PrimaryButton } from "./PrimaryButton";
 import { OutlineButton } from "./OutlineButton";
 
 export const FocusedGifSection = ({ id }) => {
@@ -41,10 +39,13 @@ export const FocusedGifSection = ({ id }) => {
     else
         return (
             <FocusedGifContainer className="hola">
-                <BackLink onClick={() => window.history.back()}>
-                    <LeftArrowIcon />
-                    Go back
-                </BackLink>
+                <OutlineButton
+                    label="Go back"
+                    leftIcon={<LeftArrowIcon />}
+                    handleClick={() => window.history.back()}
+                    width="10rem"
+                    borderRadius="24px"
+                />
                 <FocusedImage
                     id={data?.id}
                     src={data?.images?.original?.url}
@@ -55,7 +56,6 @@ export const FocusedGifSection = ({ id }) => {
                 />
                 <GifDataSection>
                     <GifTitle>{data?.title}</GifTitle>
-
                     <OutlineButton
                         label="Add to favorites"
                         rightIcon={<HeartOutlineIcon />}

@@ -27,9 +27,9 @@ export const FocusedGifContainer = styled.section`
 
     @media screen and (min-width: 1200px) {
         display: grid;
-        grid-template-columns: 6.5rem auto 22rem;
+        grid-template-columns: 10rem auto 20rem;
         gap: 2rem;
-        margin: 7.5rem 6rem 0 6rem;
+        margin: 7.5rem 7rem 0 7rem;
     }
 `;
 
@@ -42,7 +42,6 @@ export const GifDataSection = styled.div`
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    margin-top: 1rem;
 `;
 
 export const BtnGroup = styled.div`

@@ -2,10 +2,14 @@ import React from "react";
 import {
     FooterBrand,
     FooterContainer,
+    FooterLink,
     FooterLogo,
     FooterSection,
 } from "../styles/Footer";
 import { Logo } from "./Logo";
+import { Row } from "@/components/Layout/Row";
+import { GithubIcon } from "./Icons/GithubIcon";
+import { TwitterIcon } from "./Icons/TwitterIcon";
 
 export const Footer = () => {
     return (
@@ -24,18 +28,34 @@ export const Footer = () => {
                         From cats to memes. Hundreds and hundreds of funny gifs
                         waiting to be discovered.
                     </p>
+                    <Row gap="2rem" margin="0.5rem 0 0 0">
+                        <FooterLink
+                            href="https://github.com/devenapuros"
+                            target="_blank"
+                        >
+                            <GithubIcon />
+                            Github
+                        </FooterLink>
+                        <FooterLink
+                            href="https://twitter.com/devenapuros"
+                            target="_blank"
+                        >
+                            <TwitterIcon />
+                            Twitter
+                        </FooterLink>
+                    </Row>
                 </FooterSection>
                 <FooterSection>
                     <h3>Site</h3>
                     <ul>
                         <li>
-                            <a href="">Home</a>
+                            <FooterLink href="">Home</FooterLink>
                         </li>
                         <li>
-                            <a href="">Search</a>
+                            <FooterLink href="">Search</FooterLink>
                         </li>
                         <li>
-                            <a href="">Explore</a>
+                            <FooterLink href="">Explore</FooterLink>
                         </li>
                     </ul>
                 </FooterSection>
@@ -43,22 +63,14 @@ export const Footer = () => {
                     <h3>Account</h3>
                     <ul>
                         <li>
-                            <a href="">Login</a>
+                            <FooterLink href="">Login</FooterLink>
                         </li>
                         <li>
-                            <a href="">Register</a>
+                            <FooterLink href="">Register</FooterLink>
                         </li>
                         <li>
-                            <a href="">Upload</a>
+                            <FooterLink href="">Upload</FooterLink>
                         </li>
-                    </ul>
-                </FooterSection>
-                <FooterSection>
-                    <h3>Follow us</h3>
-                    <ul>
-                        <li>Twitter</li>
-                        <li>Facebook</li>
-                        <li>Instagram</li>
                     </ul>
                 </FooterSection>
             </FooterContainer>

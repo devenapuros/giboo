@@ -7,25 +7,26 @@ export const OutlineBtn = styled.button`
     padding: ${({ padding }) => padding || "0.5rem"};
     margin: ${({ margin }) => margin || "0"};
     width: ${({ width }) => width || "auto"};
+    height: fit-content;
     border: 0;
-    gap: 0.4rem;
+    gap: 0.5rem;
     outline: none;
     border: 2px solid ${({ theme }) => theme.hoverColor};
     background-color: ${({ theme }) => theme.backgroundColor};
-    color: ${({ theme }) => theme.textColorAlt};
+    color: ${({ theme }) => theme.grayColor};
     border-radius: ${({ borderRadius }) => borderRadius || "8px"};
     transition: all 300ms ease;
     font-size: 1rem;
     font-weight: 500;
     svg {
-        fill: ${({ theme }) => theme.textColorAlt};
+        fill: ${({ theme }) => theme.grayColor};
     }
     &:hover {
         cursor: pointer;
-        color: ${({ theme }) => theme.textColor};
+        color: ${({ theme }) => theme.textColorAlt};
         background-color: ${({ theme }) => theme.hoverColor};
         svg {
-            fill: ${({ theme }) => theme.textColor};
+            fill: ${({ theme }) => theme.textColorAlt};
         }
     }
     ${({ theme, active }) =>
