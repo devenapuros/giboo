@@ -2,7 +2,6 @@ import {
     CardBody,
     CloseModalBtn,
     LoginBrand,
-    LoginWithGoogleBtn,
     ModalBackground,
     ModalCard,
     ModalForm,
@@ -13,8 +12,6 @@ import { CloseIcon } from "./Icons/CloseIcon";
 import { Input } from "./Input";
 import { PrimaryButton } from "./PrimaryButton";
 import { Logo } from "./Logo";
-import { Separator } from "../styles/Separator";
-import { GoogleIcon } from "./Icons/GoogleIcon";
 import { PassInput } from "./PassInput";
 import { TabButton } from "./TabButton";
 import { useState } from "react";
@@ -51,32 +48,7 @@ export const LoginModal = ({ modalController }) => {
                 <CardBody
                     visible={currentTab === "login"}
                     className="card-body"
-                >
-                    <LoginBrand className="brand">
-                        <Logo name="topbar-logo" size="4rem" />
-                        <h1>
-                            Gi<span className="purple">b</span>
-                            <span className="deeppink">o</span>
-                            <span className="orange">o</span>
-                        </h1>
-                    </LoginBrand>
-                    <SmallText>Login with your email account</SmallText>
-                    <ModalForm>
-                        <Input label="Email" placeholder="Enter your email" />
-                        <Input
-                            type="password"
-                            label="Password"
-                            placeholder="Enter your password"
-                        />
-                        <PrimaryButton name="submit-btn" label="Login" />
-                    </ModalForm>
-                    <Separator type="horizontal" />
-                    <SmallText>Login with your social media</SmallText>
-                    <LoginWithGoogleBtn>
-                        <GoogleIcon />
-                        Google
-                    </LoginWithGoogleBtn>
-                </CardBody>
+                ></CardBody>
                 <CardBody
                     visible={currentTab === "register"}
                     className="card-body"

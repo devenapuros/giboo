@@ -14,5 +14,21 @@ export const GlobalStyle = createGlobalStyle`
     body {
         background-color: ${({ theme }) => theme.backgroundColor} !important;
         transition: all 300ms ease;
+        color: ${({ theme }) => theme.textColor};
+    }
+
+    a {
+        color: ${({ theme }) => theme.blueColor};
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .text-muted {
+        color: ${({ theme }) => theme.grayColor};
+    }
+
+    .text-center {
+        text-align: center;
     }
 `;

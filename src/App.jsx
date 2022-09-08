@@ -10,6 +10,7 @@ import { useModalContext } from "./context/modalContext";
 import { LoginModal } from "./components/LoginModal";
 import { AuthProvider } from "./context/authContext";
 import { RecentSearchsContextProvider } from "./context/recentSearchsContext";
+import { JoinPage } from "@/pages/JoinPage";
 
 function App() {
     const { theme } = useTheme();
@@ -21,6 +22,7 @@ function App() {
                     <GlobalStyle />
                     <Route path="/" component={MainPage} />
                     <Route path="/search" component={SearchPage} />
+                    <Route path="/join" component={JoinPage} />
                     <Route path="/search/:search">
                         {(params) => <SearchPage q={params.search} />}
                     </Route>

@@ -10,10 +10,7 @@ export const useAuth = () => {
 };
 
 export function AuthProvider({ children }) {
-    const [user, setUser] = useState({
-        username: "misterrobotow",
-        avatar: "/dog.gif",
-    });
+    const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
 
     const signup = (username, email, password) => {

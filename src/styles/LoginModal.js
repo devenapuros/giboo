@@ -107,29 +107,6 @@ export const SmallText = styled.small`
     font-size: 0.8rem;
 `;
 
-export const LoginWithGoogleBtn = styled.button`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.3rem;
-    padding: 0.35rem;
-    width: 100%;
-    border-radius: 5px;
-    border: 0;
-    outline: none;
-    color: ${({ theme }) => theme.grayColor};
-    border: 1px solid ${({ theme }) => theme.hoverColor};
-    font-size: 0.82rem;
-    font-weight: 550;
-    transition: all 300ms ease;
-    svg {
-        transform: scale(0.85);
-    }
-    &:hover {
-        cursor: pointer;
-    }
-`;
-
 export const LoginBrand = styled.div`
     display: flex;
     align-items: center;

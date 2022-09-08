@@ -13,17 +13,16 @@ export const OutlineBtn = styled.button`
     outline: none;
     border: 2px solid ${({ theme }) => theme.hoverColor};
     background-color: ${({ theme }) => theme.backgroundColor};
-    color: ${({ theme }) => theme.grayColor};
+    color: ${({ theme }) => theme.textColorAlt};
     border-radius: ${({ borderRadius }) => borderRadius || "8px"};
     transition: all 300ms ease;
     font-size: 1rem;
     font-weight: 500;
     svg {
-        fill: ${({ theme }) => theme.grayColor};
+        fill: ${({ theme }) => theme.textColorAlt};
     }
     &:hover {
         cursor: pointer;
-        color: ${({ theme }) => theme.textColorAlt};
         background-color: ${({ theme }) => theme.hoverColor};
         svg {
             fill: ${({ theme }) => theme.textColorAlt};
