@@ -20,11 +20,6 @@ export const MainTops = () => {
                     width="12rem"
                     borderRadius="25px"
                 />
-                <OutlineButton
-                    label="Sticker"
-                    width="12rem"
-                    borderRadius="25px"
-                />
             </Row>
             {popularSearchs.map((item) => (
                 <TopSection key={item.keyword} item={item} />
