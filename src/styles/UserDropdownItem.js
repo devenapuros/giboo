@@ -14,7 +14,7 @@ export const MenuOptionButton = styled.a`
     font-size: 0.93rem;
     transition: all 300ms ease;
     svg {
-        transform: scale(0.9);
+        transform: scale(0.85);
         fill: ${({ theme }) => theme.textColorAlt};
     }
     &:hover {
