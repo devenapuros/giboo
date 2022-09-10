@@ -1,4 +1,3 @@
-import React from "react";
 import { PrimaryBtn } from "../styles/Button";
 
 export const PrimaryButton = ({ label, icon, name, handleClick }) => {

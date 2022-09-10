@@ -19,9 +19,6 @@ export const GlobalStyle = createGlobalStyle`
 
     a {
         color: ${({ theme }) => theme.blueColor};
-        &:hover {
-            text-decoration: underline;
-        }
     }
 
     .text-muted {

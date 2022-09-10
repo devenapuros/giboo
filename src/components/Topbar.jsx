@@ -18,6 +18,7 @@ import { useClickOutsideListener } from "../hooks/useClickOutsideListener";
 import { Link } from "wouter";
 
 export const Topbar = ({ allowHeader }) => {
+    
     const [header, setHeader] = useState(false);
     const [menuVisible, setMenuVisible] = useState(false);
     const { theme, handleTheme } = useTheme();

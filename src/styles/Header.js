@@ -28,12 +28,12 @@ export const HeaderContainer = styled.header`
 
 export const AttributionText = styled.span`
     position: absolute;
-    bottom: 3px;
-    right: 2px;
+    bottom: 4px;
+    right: 3px;
     padding: 0.3rem;
     font-weight: 500;
     font-size: 0.88rem;
-    color: #ccc;
+    color: ${({ theme }) => theme.whiteColor};
     a {
         color: ${({ theme }) => theme.blueColor};
     }
