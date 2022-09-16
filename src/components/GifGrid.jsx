@@ -1,9 +1,9 @@
 import { GifContainer } from "../styles/GifGrid";
 import { Image } from "./Image";
-import { Loader } from "./Loader";
+import { GifLoader } from "../components/GifLoader";
 
 export const GifGrid = ({ data, loading, error }) => {
-    if (loading) return <Loader />;
+    if (loading) return <GifLoader />;
     if (error) return <GifContainer>{error}</GifContainer>;
     else
         return (

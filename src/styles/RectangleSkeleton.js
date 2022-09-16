@@ -7,5 +7,5 @@ export const RectSkeleton = styled.div`
     min-height: ${({ height }) => height || "3rem"};
     min-width: ${({ width }) => width || "3rem"};
     background-color: ${({ theme }) => theme.hoverColor};
-    border-radius: 4px;
+    border-radius: ${({ corner }) => corner || "8px"};
 `;

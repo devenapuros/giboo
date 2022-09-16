@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const TopsListContainer = styled.main`
+export const SectionContainer = styled.section`
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
@@ -11,22 +11,22 @@ export const TopsListContainer = styled.main`
     }
 
     @media screen and (max-width: 600px) {
-        margin: 3rem 0.7rem 1rem 0.7rem;
+        margin: 2.5rem 0.7rem;
     }
 
     @media screen and (min-width: 600px) {
-        margin: 3rem 1rem 1rem 1rem;
+        margin: 2.5rem 1rem;
     }
 
     @media screen and (min-width: 768px) {
-        margin: 3rem 2rem 1rem 2rem;
+        margin: 2.5rem 2rem;
     }
 
     @media screen and (min-width: 992px) {
-        margin: 3rem 4.5rem 1rem 4.5rem;
+        margin: 2.5rem 4.5rem;
     }
 
     @media screen and (min-width: 1200px) {
-        margin: 3rem 5rem 1rem 5rem;
+        margin: 2.5rem 5rem;
     }
 `;
