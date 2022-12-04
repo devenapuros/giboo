@@ -15,7 +15,7 @@ export const GifGrid = ({ data, loading, error }) => {
                             key={item.id}
                             id={item.id}
                             alt={item.title}
-                            src={item.images.original.url}
+                            src={item.images.downsized_medium.url}
                             contWidth="100%"
                             contHeight="fit-content"
                             imgWidth="100%"

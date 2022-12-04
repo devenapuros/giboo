@@ -22,14 +22,12 @@ function App() {
                     <GlobalStyle />
                     <Route path="/" component={MainPage} />
                     <Route path="/search" component={SearchPage} />
-                    <Route path="/join" component={JoinPage} />
                     <Route path="/search/:search">
                         {(params) => <SearchPage q={params.search} />}
                     </Route>
                     <Route path="/gif/:id">
                         {(params) => <GifPage id={params.id} />}
                     </Route>
-                    <LoginModal modalController={modalController} />
                 </ThemeProvider>
             </RecentSearchsContextProvider>
         </AuthProvider>

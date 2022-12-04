@@ -12,13 +12,11 @@ import { SearchForm } from "./SearchForm";
 import { SunIcon } from "./Icons/SunIcon";
 import { useTheme } from "../context/themeContext";
 import { MoonIcon } from "./Icons/MoonIcon";
-import { AuthWidget } from "./AuthWidget";
 import { ChevronIcon } from "./Icons/ChevronIcon";
 import { useClickOutsideListener } from "../hooks/useClickOutsideListener";
 import { Link } from "wouter";
 
 export const Topbar = ({ allowHeader }) => {
-    
     const [header, setHeader] = useState(false);
     const [menuVisible, setMenuVisible] = useState(false);
     const { theme, handleTheme } = useTheme();
@@ -66,11 +64,6 @@ export const Topbar = ({ allowHeader }) => {
                     <TransparentButton
                         width="fit-content"
                         name="menu-item-btn"
-                        label="Upload"
-                    />
-                    <TransparentButton
-                        width="fit-content"
-                        name="menu-item-btn"
                         label="Explore"
                     />
                     <TransparentButton
@@ -78,7 +71,11 @@ export const Topbar = ({ allowHeader }) => {
                         name="menu-item-btn"
                         label="About"
                     />
-
+                    <TransparentButton
+                        width="fit-content"
+                        name="menu-item-btn"
+                        label="Github"
+                    />
                     <TransparentButton
                         width="fit-content"
                         name="menu-item-btn theme-toggler"
@@ -93,7 +90,6 @@ export const Topbar = ({ allowHeader }) => {
                     />
                 </Menu>
                 <RightGroup>
-                    <AuthWidget />
                     <MenuBtn
                         ref={menuBtnRef}
                         active={menuVisible}

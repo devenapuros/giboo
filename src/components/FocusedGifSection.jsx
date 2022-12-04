@@ -13,6 +13,8 @@ import { HeartOutlineIcon } from "./Icons/HeartOutlineIcon";
 import { QueueIcon } from "./Icons/QueueIcon";
 import { LeftArrowIcon } from "./Icons/LeftArrowIcon";
 import { OutlineButton } from "./OutlineButton";
+import { PrimaryButton } from "./PrimaryButton";
+import { Row } from "./Layout/Row";
 
 export const FocusedGifSection = ({ id }) => {
     const [data, error, loading] = useFocusedGif(id);
@@ -39,28 +41,28 @@ export const FocusedGifSection = ({ id }) => {
     else
         return (
             <FocusedGifContainer className="hola">
-                <OutlineButton
-                    label="Go back"
-                    leftIcon={<LeftArrowIcon />}
-                    handleClick={() => window.history.back()}
-                    width="10rem"
-                    borderRadius="24px"
-                />
+                <Row
+                    justifyContent="space-between"
+                    alignItems="center"
+                >
+                    <GifTitle>{data?.title}</GifTitle>
+                    <PrimaryButton label="Copy link" />
+                </Row>
                 <FocusedImage
                     id={data?.id}
-                    src={data?.images?.original?.url}
+                    src={data?.images?.downsized_medium.url}
                     contHeight="fit-content"
                     contWidth="100%"
                     imgWidth="100%"
                     imgHeight="auto"
                 />
+
                 <GifDataSection>
-                    <GifTitle>{data?.title}</GifTitle>
-                    <OutlineButton
+                    {/* <OutlineButton
                         label="Add to favorites"
                         rightIcon={<HeartOutlineIcon />}
-                    />
-                    <OutlineButton label="Collect" rightIcon={<QueueIcon />} />
+                    /> */}
+                    {/* <OutlineButton label="Collect" rightIcon={<QueueIcon />} /> */}
                 </GifDataSection>
             </FocusedGifContainer>
         );

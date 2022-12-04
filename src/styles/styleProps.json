@@ -2,7 +2,7 @@
     "light": {
         "backgroundColor": "#f6f7f8",
         "backgroundColorAlt": "#fff",
-        "textColor": "#252525",
+        "textColor": "#111",
         "textColorAlt": "#444",
         "blueColor": "#00a6fb",
         "redColor" : "#e74c3c",
@@ -12,12 +12,12 @@
         "grayColor": "#666666",
         "blackColor": "#151515",
         "whiteColor": "#fefefe",
-        "hoverColor": "#00000018",
+        "hoverColor": "#00000015",
         "shadow": "rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;"
     },
     "dark": {
-        "backgroundColor": "#131415",
-        "backgroundColorAlt": "#202122",
+        "backgroundColor": "#111",
+        "backgroundColorAlt": "#181818",
         "textColor": "#fdfdff",
         "textColorAlt": "#ccc",
         "blueColor": "#00a6fb",
@@ -28,7 +28,7 @@
         "grayColor": "#666666",
         "blackColor": "#151515",
         "whiteColor": "#fefefe",
-        "hoverColor": "#ffffff15",
-        "shadow": " rgba(0, 0, 0, 0.7) 0px 10px 10px -10px;"
+        "hoverColor": "#ffffff13",
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 10px 10px -10px;"
     }
 }

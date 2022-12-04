@@ -10,7 +10,6 @@ export const Header = () => {
     return (
         <HeaderContainer>
             <Topbar allowHeader={true} />
-            {/* <Logo size="6rem" /> */}
             <SearchSection>
                 <h1 className="slogan">
                     From cats to memes. Hundreds and hundreds of funny gifs
@@ -18,16 +17,16 @@ export const Header = () => {
                 </h1>
                 <SearchForm />
             </SearchSection>
-            <AttributionText>
+            {/* <AttributionText>
                 Image by{" "}
                 <a
                     href="https://www.instagram.com/killerrabbitmedia/"
                     target="_blank"
                     rel="noreferrer"
                 >
-                    @killerrabbitmedia
+                    @pexels
                 </a>
-            </AttributionText>
+            </AttributionText> */}
         </HeaderContainer>
     );
 };

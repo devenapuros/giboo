@@ -19,10 +19,9 @@ export const HeaderContainer = styled.header`
         width: 100%;
         height: 100%;
         z-index: -1;
-        background: url("/the-bay.jpg");
+        background: url("/bird.gif");
         background-position: 50% 20%;
         background-size: cover;
-        filter: brightness(0.8);
     }
 `;
 
@@ -33,9 +32,9 @@ export const AttributionText = styled.span`
     padding: 0.3rem;
     font-weight: 500;
     font-size: 0.88rem;
-    color: ${({ theme }) => theme.whiteColor};
+    color: #333;
     a {
-        color: ${({ theme }) => theme.blueColor};
+        color: #111;
     }
     a:hover {
         text-decoration: underline;
@@ -48,13 +47,15 @@ export const SearchSection = styled.div`
     align-items: center;
     flex-direction: column;
     text-align: center;
-    gap: 1.5rem;
+    gap: 4rem;
 
     .slogan {
         width: 100%;
-        line-height: 50px;
-        text-shadow: #00000090 0px 0px 30px;
-        font-weight: 500;
+        font-size: 2rem;
+        line-height: 1.3;
+        color: white;
+        text-shadow: #000000 0px 0px 30px;
+        font-weight: 600;
     }
 
     @media screen and (max-width: 600px) {
@@ -81,7 +82,10 @@ export const SearchSection = styled.div`
         width: 48vw;
         .slogan {
             width: 100%;
-            font-size: 2rem;
+            font-size: 2.5rem;
         }
     }
 `;
+
+
+// Photo by Gradienta: https://www.pexels.com/photo/a-gradient-wallpaper-7135121/

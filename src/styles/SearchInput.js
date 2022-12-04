@@ -13,7 +13,7 @@ export const InputContainer = styled.div`
     border-radius: 8px;
     transition: all 300ms ease;
     z-index: 0;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 8px 24px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 8px 34px;
 
     ${({ focus }) =>
         focus &&

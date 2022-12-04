@@ -18,7 +18,7 @@ export const PrimaryBtn = styled.button`
     }
     background-color: ${({ theme }) => theme.blueColor};
     color: ${({ theme }) => theme.whiteColor};
-    border: 2px solid ${({ theme }) => theme.hoverColor};
+    border: 2px solid ${({ theme }) => theme.blueColor};
     svg {
         transform: scale(0.9);
         fill: ${({ theme }) => theme.whiteColor};
