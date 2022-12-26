@@ -7,7 +7,6 @@
 <p align="center">
     A place for discover hundreds of funny gifs 🖼️
     <br />
-    <br />
     <a href="https://avocadoo.vercel.app">Go to website</a>&nbsp;
     ·
     &nbsp;<a href="https://github.com/devenapuros/Avocadoo">Report Bug</a>
