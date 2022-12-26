@@ -2,7 +2,7 @@
   <div align="center">
     <img alt="Giboo logo" src="./public/favicon.png" height="150px" width="auto"/>
   </div>
-  Avocadoo
+  Giboo
 </h1>
 <p align="center">
     A place for discover hundreds of funny gifs 🖼️
