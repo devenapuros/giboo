@@ -75,7 +75,8 @@ export const Footer = () => {
                 </FooterSection>
             </FooterContainer>
             <FooterBrand>
-                Developed by&nbsp;<a href="">@devenapuros 🚀</a>
+                Developed by&nbsp;
+                <a href="https://github.com/devenapuros">@devenapuros 🚀</a>
             </FooterBrand>
         </React.Fragment>
     );

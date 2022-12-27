@@ -4,7 +4,7 @@ export const PrimaryBtn = styled.button`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0.6rem 1.1rem;
+    padding: 0.6rem 1.4rem;
     border: 0;
     outline: none;
     border-radius: 8px;
@@ -12,6 +12,9 @@ export const PrimaryBtn = styled.button`
     font-weight: 600;
     transition: all 300ms ease;
     gap: 0.4rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
     &:hover {
         filter: brightness(1.2);
         cursor: pointer;

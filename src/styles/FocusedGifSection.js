@@ -6,13 +6,16 @@ export const FocusedGifContainer = styled.section`
     gap: 2rem;
     margin: 7rem auto 1rem;
     width: 100%;
-    max-width: 668px;
+    max-width: 568px;
     color: ${({ theme }) => theme.textColor};
 `;
 
 export const GifTitle = styled.h1`
     font-weight: 600;
     text-transform: capitalize;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 `;
 
 export const GifDataSection = styled.div`

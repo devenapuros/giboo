@@ -10,19 +10,10 @@ export const HeaderContainer = styled.header`
     height: fit-content;
     min-height: 550px;
     color: ${({ theme }) => theme.whiteColor};
-
-    &:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        background: url("/bird.gif");
-        background-position: 50% 20%;
-        background-size: cover;
-    }
+    background-color: black;
+    background: url("/bird.gif");
+    background-position: 50% 20%;
+    background-size: cover;
 `;
 
 export const AttributionText = styled.span`
@@ -86,6 +77,5 @@ export const SearchSection = styled.div`
         }
     }
 `;
-
 
 // Photo by Gradienta: https://www.pexels.com/photo/a-gradient-wallpaper-7135121/

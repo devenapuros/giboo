@@ -5,7 +5,6 @@ export const ExploreSection = () => {
     return (
         <SectionContainer>
             <h1>Explore</h1>
-            <div className="box-container"></div>
         </SectionContainer>
     );
 };

@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Link } from "wouter";
 import {
     Brand,
     Menu,
@@ -14,7 +15,6 @@ import { useTheme } from "../context/themeContext";
 import { MoonIcon } from "./Icons/MoonIcon";
 import { ChevronIcon } from "./Icons/ChevronIcon";
 import { useClickOutsideListener } from "../hooks/useClickOutsideListener";
-import { Link } from "wouter";
 
 export const Topbar = ({ allowHeader }) => {
     const [header, setHeader] = useState(false);
@@ -78,7 +78,7 @@ export const Topbar = ({ allowHeader }) => {
                     />
                     <TransparentButton
                         width="fit-content"
-                        name="menu-item-btn theme-toggler"
+                        name="menu-item-btn"
                         handleClick={handleTheme}
                         icon={
                             theme === "dark" ? (

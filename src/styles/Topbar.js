@@ -31,16 +31,8 @@ export const TopbarContainer = styled.nav`
                 box-shadow: none;
             }
             .menu-item-btn,
-            .user-btn {
+            .menu-btn {
                 color: ${({ theme }) => theme.textColor} !important;
-            }
-            .menu-btn svg {
-                fill: ${({ theme }) => theme.textColor};
-            }
-            .theme-toggler {
-                svg {
-                    fill: ${({ theme }) => theme.textColor} !important;
-                }
             }
             .brand {
                 color: ${({ theme }) => theme.textColorAlt};
@@ -65,14 +57,6 @@ export const TopbarContainer = styled.nav`
                 .menu-item-btn,
                 .user-btn {
                     color: ${theme.textColor};
-                }
-                .menu-btn svg {
-                    fill: ${theme.textColor} !important;
-                }
-                .theme-toggler {
-                    svg {
-                        fill: ${({ theme }) => theme.textColor} !important;
-                    }
                 }
             `};
     }
@@ -169,9 +153,8 @@ export const MenuBtn = styled.button`
     border: 0;
     outline: none;
     border-radius: 100%;
+    color: white;
     svg {
-        transition: all 300ms ease;
-        fill: ${({ theme }) => theme.whiteColor};
         transform: scale(1.1);
     }
     &.showing-menu svg {
@@ -193,12 +176,6 @@ export const Menu = styled(RightGroup)`
         font-weight: 500;
         &:hover {
             background-color: ${({ theme }) => theme.hoverColor};
-        }
-    }
-
-    .theme-toggler {
-        svg {
-            fill: ${({ theme }) => theme.whiteColor};
         }
     }
 
