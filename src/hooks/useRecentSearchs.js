@@ -8,7 +8,7 @@ export const useRecentSearchs = () => {
         let aux_set = new Set(searchs);
         aux_set.add(search);
         setSearchs(aux_set);
-        if (aux_set.size > 11) {
+        if (aux_set.size > 10) {
             let aux_array = Array.from(aux_set);
             setSearchs(new Set(aux_array.filter((item, index) => index !== 0)));
         }
