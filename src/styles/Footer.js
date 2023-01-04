@@ -43,11 +43,17 @@ export const FooterSection = styled.section`
         font-weight: 600;
         font-size: 1.1rem;
     }
+
     ul {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         gap: 0.2rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+        color: ${({ theme }) => theme.textColorAlt};
     }
 `;
 
@@ -98,7 +104,7 @@ export const FooterLink = styled.a`
     gap: 0.3rem;
     font-size: 0.9rem;
     transition: all 300ms ease;
-    color: ${({ theme }) => theme.textColor};
+    color: ${({ theme }) => theme.textColorAlt};
     svg {
         transform: scale(0.9);
         transition: all 300ms ease;

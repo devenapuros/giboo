@@ -15,6 +15,8 @@ import { useTheme } from "../context/themeContext";
 import { MoonIcon } from "./Icons/MoonIcon";
 import { ChevronIcon } from "./Icons/ChevronIcon";
 import { useClickOutsideListener } from "../hooks/useClickOutsideListener";
+import { TransparentLink } from "./TransparentLink";
+import { GithubIcon } from "./Icons/GithubIcon";
 
 export const Topbar = ({ allowHeader }) => {
     const [header, setHeader] = useState(false);
@@ -61,21 +63,25 @@ export const Topbar = ({ allowHeader }) => {
             <SearchForm name="search-form" padding="0.6rem 0" />
             <RightGroup>
                 <Menu visible={menuVisible} ref={menuRef}>
-                    <TransparentButton
+                    {/* <TransparentButton
                         width="fit-content"
                         name="menu-item-btn"
                         label="Explore"
-                    />
-                    <TransparentButton
+                    /> */}
+                    {/* <TransparentButton
                         width="fit-content"
                         name="menu-item-btn"
                         label="About"
-                    />
-                    <TransparentButton
+                    /> */}
+                    <TransparentLink
                         width="fit-content"
                         name="menu-item-btn"
-                        label="Github"
-                    />
+                        href="https://github.com/devenapuros"
+                        target="_blank"
+                    >
+                        <GithubIcon />
+                        Github
+                    </TransparentLink>
                     <TransparentButton
                         width="fit-content"
                         name="menu-item-btn"

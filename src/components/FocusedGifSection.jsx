@@ -13,9 +13,7 @@ export const FocusedGifSection = ({ id }) => {
         window.scrollTo(0, 0);
     }, []);
 
-    const copyLink = () => {
-
-    }
+    const copyLink = () => {};
 
     if (loading)
         return (

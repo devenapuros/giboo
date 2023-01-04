@@ -10,8 +10,7 @@ export const HeaderContainer = styled.header`
     height: fit-content;
     min-height: 550px;
     color: ${({ theme }) => theme.whiteColor};
-    background-color: black;
-    background: url("/bird.gif");
+    background: url("/bird.gif"), black;
     background-position: 50% 20%;
     background-size: cover;
 `;

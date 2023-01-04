@@ -1,5 +1,4 @@
 import { SectionContainer } from "../styles/SectionContainer";
-import "../styles/explore-section.css";
 
 export const ExploreSection = () => {
     return (

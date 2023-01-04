@@ -8,15 +8,7 @@ export const HomeSectionsTabs = ({ currentSection, setCurrentSection }) => {
                 label="Popular searchs"
                 width="12rem"
                 borderRadius="25px"
-                active={currentSection === "popular-searchs"}
-                handleClick={() => setCurrentSection("popular-searchs")}
-            />
-            <OutlineButton
-                label="Explore"
-                width="12rem"
-                borderRadius="25px"
-                active={currentSection === "explore"}
-                handleClick={() => setCurrentSection("explore")}
+                active
             />
         </Row>
     );

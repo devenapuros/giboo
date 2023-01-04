@@ -6,15 +6,11 @@ import { GlobalStyle } from "./styles/Global";
 import styleProps from "./styles/styleProps.json";
 import { GifPage } from "./pages/GifPage";
 import { useTheme } from "./context/themeContext";
-import { useModalContext } from "./context/modalContext";
-import { LoginModal } from "./components/LoginModal";
 import { AuthProvider } from "./context/authContext";
 import { RecentSearchsContextProvider } from "./context/recentSearchsContext";
-import { JoinPage } from "@/pages/JoinPage";
 
 function App() {
     const { theme } = useTheme();
-    const modalController = useModalContext();
     return (
         <AuthProvider>
             <RecentSearchsContextProvider>
