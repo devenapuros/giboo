@@ -18,7 +18,7 @@ export const useFocusedGif = (id) => {
                     response.meta.status &&
                     response.meta.status === 200
                 ) {
-                    console.log(response.data);
+                    //! console.log(response.data);
                     setData(response.data);
                     setError(false);
                 } else {

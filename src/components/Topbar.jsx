@@ -27,7 +27,6 @@ export const Topbar = ({ allowHeader }) => {
 
     const autoHideMenu = (ref, event) => {
         if (menuBtnRef.current && !menuBtnRef.current.contains(event.target)) {
-            console.log("hide menu");
             setMenuVisible(false);
         }
     };

@@ -8,6 +8,10 @@ export const FocusedGifContainer = styled.section`
     width: 100%;
     max-width: 568px;
     color: ${({ theme }) => theme.textColor};
+
+    @media screen and (max-width: 568px) {
+        width: 90vw !important;
+    }
 `;
 
 export const GifTitle = styled.h1`

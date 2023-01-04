@@ -1,19 +1,28 @@
 import { useEffect } from "react";
+
 import { FocusedGifContainer, GifTitle } from "../styles/FocusedGifSection";
 import { FocusedImage } from "./FocusedImage";
 import { useFocusedGif } from "../hooks/useFocusedGif";
 import { RectangleSkeleton } from "./RectangleSkeleton";
 import { PrimaryButton } from "./PrimaryButton";
 import { Row } from "./Layout/Row";
+import confetti from "canvas-confetti";
+import { useState } from "react";
 
 export const FocusedGifSection = ({ id }) => {
     const [data, error, loading] = useFocusedGif(id);
+    const [isCopied, setIsCopied] = useState(false);
 
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
 
-    const copyLink = () => {};
+    const copyLink = () => {
+        navigator.clipboard.writeText(window.location);
+        confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
+        setIsCopied(true);
+        setTimeout(() => setIsCopied(false), 1200);
+    };
 
     if (loading)
         return (
@@ -36,7 +45,10 @@ export const FocusedGifSection = ({ id }) => {
                     gap="1rem"
                 >
                     <GifTitle>{data?.title}</GifTitle>
-                    <PrimaryButton label="Copy link" />
+                    <PrimaryButton
+                        label={isCopied ? "Link copied" : "Copy link"}
+                        handleClick={copyLink}
+                    />
                 </Row>
                 <FocusedImage
                     id={data?.id}
