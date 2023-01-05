@@ -6,7 +6,6 @@ import { Topbar } from "../components/Topbar";
 
 export const SearchPage = ({ q }) => {
     if (!q) return <Redirect to="/" />;
-
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -14,7 +13,7 @@ export const SearchPage = ({ q }) => {
     return (
         <React.Fragment>
             <Topbar />
-            <ResultsSection q={q} />
+            <ResultsSection searchString={q} />
             <Footer />
         </React.Fragment>
     );

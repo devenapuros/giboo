@@ -10,8 +10,10 @@ export const TransparentBtn = styled.button`
     width: ${({ width }) => width || "100%"};
     background-color: transparent;
     transition: all 300ms ease;
+    color: ${({ theme }) => theme.grayColor};
     &:hover {
         cursor: pointer;
+        color: ${({ theme }) => theme.textColorAlt};
     }
     ${({ disabled }) =>
         disabled &&
